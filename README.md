@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+﻿<<<<<<< HEAD
 # Tim8-CitizenKane
 Tema je sljedeća
 Tema je sljedeća
@@ -17,3 +17,4 @@ Tema je sljedeća
 1. Durmić Nedim
 2. Hadžirović Kenan
 3. Halilović Irhad
+testiramo konflikte
