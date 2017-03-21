@@ -44,3 +44,5 @@ listu transfera, a na račun korisnika se dodaje novčani iznos vrijednosti prod
 
 ### Akteri
 
+- Korisnik simulatora
+- Moderator (korisnik koji može da vrši promjene nad sistemom)
