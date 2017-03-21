@@ -1,5 +1,4 @@
-﻿﻿#### Tim8-CitizenKane
-# Football Simulator
+﻿# Football Simulator
 
 ### Članovi:
 1. Durmić Nedim
