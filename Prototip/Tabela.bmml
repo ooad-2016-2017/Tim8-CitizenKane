@@ -1,0 +1,60 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="907" measuredH="553" mockupW="900" mockupH="553">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::ButtonBar" x="7" y="10" w="875" h="27" measuredW="405" measuredH="27" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>3</selectedIndex>
+        <text>Home%2C%20Taktika%2C%20Kalendar%2C%20Tabela%2C%20Transferi%2C%20Opcije</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Button" x="589" y="426" w="273" h="111" measuredW="93" measuredH="27" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>7317724</color>
+        <text>Odigraj%20kolo</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::DataGrid" x="17" y="58" w="556" h="481" measuredW="254" measuredH="111" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>1</selectedIndex>
+        <text>Klub%2C%20Odigrano%20%5Ev%2C%20Golovi%2C%20Bodovi%20v%0AEkipa1%2C%204%2C%206%2C%2012%0AEkipa2%2C%204%2C%205%2C%209%0AEkipa3%2C%204%2C%20-4%2C%205</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Icon" x="661" y="89" w="-1" h="-1" measuredW="128" measuredH="128" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>2848996</color>
+        <icon>futbol-o%7Cxxlarge</icon>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Label" x="699" y="233" w="-1" h="-1" measuredW="53" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Na%u0161_Tim</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Label" x="599" y="286" w="-1" h="-1" measuredW="61" measuredH="24" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>16</size>
+        <text>Pozicija</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Label" x="599" y="316" w="-1" h="-1" measuredW="47" measuredH="24" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>16</size>
+        <text>Golovi</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Label" x="599" y="347" w="-1" h="-1" measuredW="52" measuredH="24" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>16</size>
+        <text>Bodovi</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Label" x="691" y="285" w="-1" h="-1" measuredW="61" measuredH="21" zOrder="9" locked="false" isInGroup="-1"/>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Canvas" x="7" y="0" w="900" h="553" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>14540253</color>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
