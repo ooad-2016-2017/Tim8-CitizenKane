@@ -7,11 +7,11 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="fa158b2f-212f-4cf6-b336-5e741db203fa"
+    Name="6b8ccc6a-f8b3-499a-9707-98e6b663f474"
     Publisher="CN=Kenan"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="fa158b2f-212f-4cf6-b336-5e741db203fa" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="6b8ccc6a-f8b3-499a-9707-98e6b663f474" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>FootballSimulator</DisplayName>
