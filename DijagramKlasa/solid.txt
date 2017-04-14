@@ -1,0 +1,30 @@
+- Princip pojedinaène odgovornosti (S)
+
+Dijagram klasa poštuje proncip pojedinaène odgovornosti. Svaka klasa ima samo one atribute i metode koji su joj neophodni - radi jednu stvar.
+
+- Otvoreno zatvoren princip (O)
+
+Klase u dijagramu nisu usko vezane za rad sa datotekama ili interfejsom. Stoga, nema opasnosti od urušavanja logike uslijed mijenjanja jedne od klasa. 
+Klase èuvaju informacije o objektima i kontrolišu pristup atributima. Rad sa objektima je kontrolisan upotrebom metoda, stoga, nadogradnja i promjena
+ne bi trebala praviti problem u odnosima klasa. Dijagram klasa ne prikazuje operacije koje rade specifiène aktivnosti poput pristupa bazi, spašavanja u datoteku
+i sl. Za obavljanje tih poslova zadužene su "utility" klase koje æe se dodavati po potrebi (povezivanje sa bazom, rad sa datotekama, dodavanje vizuelnog interfejsa)
+bez modifikacije trenutnog stanja.
+
+- Liskov princip zamjene (L)
+
+Obzirom da u dijagramu klasa nije prikazana potreba za naslijeðenim klasam, liskov princip zamjene nije narušen. Niti jedna klasa ne može biti zamjenjena svojom baznom
+jer potrebe za baznim klasama nema. Svaki objekat igraè sadrži dovoljno informacija o igraèima. Tim o cijelom sastavu. Klub o timu i njegovim pripadnim informacijama itd.
+
+
+- Princip izoliranja interfejsa (I)
+
+Princip izoliranja interfejsa inicijalno nije bio ispoštovan. Dodavanjem novog interfejsa za rad sa datotekama smo ispravili situaciju. U nastavku æe možda biti
+potrebno dodavati nove klase i interfejse zavisno od potreba.
+
+- Princip inverzije ovisnosti (D)
+
+U sistemu nema potrebe za naslijeðivanjem klasa - stoga nema potrebe ni za apstraktnim klasama. Zbog toga, ovaj princip je zadovoljen.
+Npr. svaki igraè je zamišljen da bude isti po pitanju atributa i metoda. Razlikovat æe se samo u izraženosti vrijednosti tih atributa.
+Utakmica je takoðer moguæi kandidat za naslijeðivanje. Razlika izmeðu egzibicije i sezonske utakmice se može smatrati dovoljnom u realnosti, 
+ali za pozadinsku logiku nema potrebe za razlikovanjem jednog i drugog. Sama utakmica je zadužena samo za èuvanje rezultata i strijelaca, dok
+ostale (kontejnerske) klase èuvaju sve druge potrebne informacije.
