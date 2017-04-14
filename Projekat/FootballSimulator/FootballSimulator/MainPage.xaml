@@ -8,7 +8,6 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="664,285,0,0" TextWrapping="Wrap" Text="Testing GitHub Extemsion for VS" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>
