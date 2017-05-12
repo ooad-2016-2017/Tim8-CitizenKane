@@ -96,10 +96,53 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomKontrole\PrikazTabele.xaml.cs" />
+    <Compile Include="CustomKontrole\PrikazTima.xaml.cs" />
+    <Compile Include="CustomKontrole\ToolBar.xaml.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Igrac.cs" />
+    <Compile Include="Model\Klub.cs" />
+    <Compile Include="Model\Kolo.cs" />
+    <Compile Include="Model\RadSaDatotekama.cs" />
+    <Compile Include="Model\Rezultat.cs" />
+    <Compile Include="Model\Sezona.cs" />
+    <Compile Include="Model\SezonaXML.cs" />
+    <Compile Include="Model\StatistikaKluba.cs" />
+    <Compile Include="Model\Tim.cs" />
+    <Compile Include="Model\Utakmica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\SimulacijaSezone.cs" />
+    <Compile Include="ViewModel\SimulacijaUtakmice.cs" />
+    <Compile Include="ViewModel\Utility.cs" />
+    <Compile Include="View\MenuMain.xaml.cs">
+      <DependentUpon>MenuMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MenuNovaSimulacija.xaml.cs">
+      <DependentUpon>MenuNovaSimulacija.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MenuSimulacija.xaml.cs">
+      <DependentUpon>MenuSimulacija.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MenuSimulacijaCijeleSezone.xaml.cs">
+      <DependentUpon>MenuSimulacijaCijeleSezone.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PanelKalendar.xaml.cs">
+      <DependentUpon>PanelKalendar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PanelOpcije.xaml.cs">
+      <DependentUpon>PanelOpcije.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PanelTabela.xaml.cs">
+      <DependentUpon>PanelTabela.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PanelTaktika.xaml.cs">
+      <DependentUpon>PanelTaktika.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PanelTransferi.xaml.cs">
+      <DependentUpon>PanelTransferi.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -122,15 +165,60 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="CustomKontrole\PrikazTabele.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomKontrole\PrikazTima.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomKontrole\ToolBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="View\MenuMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MenuNovaSimulacija.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MenuSimulacija.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MenuSimulacijaCijeleSezone.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PanelKalendar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PanelOpcije.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PanelTabela.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PanelTaktika.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PanelTransferi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-    <Folder Include="View\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
