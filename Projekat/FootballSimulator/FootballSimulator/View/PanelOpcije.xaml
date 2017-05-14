@@ -1,13 +1,21 @@
 ﻿<Page
-    x:Class="FootballSimulator.View.PanelOpcije"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:FootballSimulator.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    xmlns:CustomKontrole="using:FootballSimulator.CustomKontrole"
+    x:Class="FootballSimulator.View.PanelOpcije"
+    mc:Ignorable="d" Width="750" Height="415">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Margin="0,0,0,0">
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Background.jpg"/>
+        </Grid.Background>
 
+        <CustomKontrole:ToolBar x:Name="ToolBar" HorizontalAlignment="Left" Margin="95,37,0,0" VerticalAlignment="Top" BorderBrush="#FFF91818"/>
+        <Image HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="61" Margin="10,10,0,0" Source="/Assets/Logo.png">
+        </Image>
+        <Button Content="Spasi" HorizontalAlignment="Left" Margin="650,373,0,0" VerticalAlignment="Top" Background="#9911B3FF"/>
     </Grid>
 </Page>
