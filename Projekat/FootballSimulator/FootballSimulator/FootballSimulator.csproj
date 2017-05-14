@@ -119,6 +119,9 @@
     <Compile Include="ViewModel\SimulacijaSezone.cs" />
     <Compile Include="ViewModel\SimulacijaUtakmice.cs" />
     <Compile Include="ViewModel\Utility.cs" />
+    <Compile Include="View\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MenuMain.xaml.cs">
       <DependentUpon>MenuMain.xaml</DependentUpon>
     </Compile>
@@ -191,7 +194,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\LoginScreen.xaml">
+    <Page Include="View\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
