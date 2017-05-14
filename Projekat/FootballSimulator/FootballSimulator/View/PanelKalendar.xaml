@@ -16,8 +16,8 @@
         <CustomKontrole:ToolBar x:Name="ToolBar" HorizontalAlignment="Left" Margin="95,37,0,0" VerticalAlignment="Top" BorderBrush="#FFF91818"/>
         <Button x:Name="buttonSljedeceKolo" Content="Odigraj kolo" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="556,344,0,0" Height="60" Width="184" Background="#CC0471B0"/>
         <TextBox x:Name="textBoxOdigranoKola" HorizontalAlignment="Left" Margin="585,252,0,0" TextWrapping="Wrap" Text="0 / 0" VerticalAlignment="Top" Height="57" Width="130" PlaceholderText="0 / 0" TextAlignment="Center"/>
-        <TextBlock HorizontalAlignment="Left" Margin="600,220,0,0" TextWrapping="Wrap" Text="Odigrano kola:" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FF0658AA" FocusVisualSecondaryBrush="#FD0000F1"/>
-        <ListBox x:Name="listBoxTabela" HorizontalAlignment="Left" Height="128" VerticalAlignment="Top" Width="159" Margin="556,87,0,0" Background="#00F2F2F2" FocusVisualPrimaryBrush="#FF1540D1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="600,220,0,0" TextWrapping="Wrap" Text="Odigrano kola:" VerticalAlignment="Top"/>
+        <ListBox x:Name="listBoxTabela" HorizontalAlignment="Left" Height="128" VerticalAlignment="Top" Width="159" Margin="556,87,0,0" Background="#00F2F2F2"/>
         <ListView x:Name="listViewKalendar" HorizontalAlignment="Left" Height="317" VerticalAlignment="Top" Width="516" Margin="35,87,0,0"/>
         <Image HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="61" Margin="10,10,0,0" Source="/Assets/Logo.png">
         </Image>
