@@ -16,7 +16,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="8*"/>
             <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>        <Grid.ColumnDefinitions>            <ColumnDefinition/>            <ColumnDefinition/>        </Grid.ColumnDefinitions>
+        </Grid.RowDefinitions>        <Grid.ColumnDefinitions>            <ColumnDefinition Width="*"/>            <ColumnDefinition MinWidth="100" Width="*"/>        </Grid.ColumnDefinitions>
 
 
         <Border x:Name="headerBorderLoginScreen" Grid.ColumnSpan="2" Background="#0F0129" Grid.Row="0" HorizontalAlignment="Stretch" Opacity="0.3">
