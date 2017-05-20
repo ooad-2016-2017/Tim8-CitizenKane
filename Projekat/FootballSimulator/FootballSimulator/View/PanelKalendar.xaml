@@ -6,20 +6,37 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:CustomKontrole="using:FootballSimulator.CustomKontrole"
     x:Class="FootballSimulator.View.PanelKalendar"
-    mc:Ignorable="d" Width="750" Height="415">
+    mc:Ignorable="d">
 
-    <Grid Margin="0,0,0,0">
+    <Grid Margin="0,0,0,0" Padding="5">
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Background.jpg"/>
         </Grid.Background>
 
-        <CustomKontrole:ToolBar x:Name="ToolBar" HorizontalAlignment="Left" Margin="95,37,0,0" VerticalAlignment="Top" BorderBrush="#FFF91818"/>
-        <Button x:Name="buttonSljedeceKolo" Content="Odigraj kolo" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="556,344,0,0" Height="60" Width="184" Background="#CC0471B0"/>
-        <TextBox x:Name="textBoxOdigranoKola" HorizontalAlignment="Left" Margin="585,252,0,0" TextWrapping="Wrap" Text="0 / 0" VerticalAlignment="Top" Height="57" Width="130" PlaceholderText="0 / 0" TextAlignment="Center"/>
-        <TextBlock HorizontalAlignment="Left" Margin="600,220,0,0" TextWrapping="Wrap" Text="Odigrano kola:" VerticalAlignment="Top"/>
-        <ListBox x:Name="listBoxTabela" HorizontalAlignment="Left" Height="128" VerticalAlignment="Top" Width="159" Margin="556,87,0,0" Background="#00F2F2F2"/>
-        <ListView x:Name="listViewKalendar" HorizontalAlignment="Left" Height="317" VerticalAlignment="Top" Width="516" Margin="35,87,0,0"/>
-        <Image HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="61" Margin="10,10,0,0" Source="/Assets/Logo.png">
-        </Image>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <CustomKontrole:ToolBar x:Name="ToolBar" MinHeight="40" HorizontalAlignment="Stretch" VerticalAlignment="Center" BorderBrush="#FFF91818" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" Margin="20,0"/>
+        <Button x:Name="buttonSljedeceKolo" Content="Odigraj kolo" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="Auto" Width="Auto" Background="#CC0471B0" Grid.Column="2" Grid.Row="3"/>
+        <TextBox x:Name="textBoxOdigranoKola" TextWrapping="Wrap" Text="Odigrano kola: 0 / 0" Height="Auto" Width="Auto" PlaceholderText="Odigrano kola: 0 / 0" TextAlignment="Center" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <ListBox x:Name="listBoxTabela" Height="Auto" Width="Auto" Background="#00F2F2F2" Grid.Column="2" Grid.Row="1">
+            <ListBoxItem>1.Najbolji tim</ListBoxItem>
+            <ListBoxItem>1.Najgori tim</ListBoxItem>
+        </ListBox>
+        <ListView x:Name="listViewKalendar" Height="Auto" Width="Auto" Grid.Column="1" Grid.RowSpan="3" Grid.Row="1">
+            <ListBoxItem>Jucer</ListBoxItem>
+            <ListBoxItem>Danas</ListBoxItem>
+            <ListBoxItem>Sutra</ListBoxItem>
+        </ListView>
+        <Image HorizontalAlignment="Center" Height="Auto" VerticalAlignment="Center" Width="Auto" Source="/Assets/Logo.png" Grid.Column="0" Grid.Row="0"/>
     </Grid>
 </Page>

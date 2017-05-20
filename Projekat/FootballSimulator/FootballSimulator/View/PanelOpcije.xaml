@@ -6,16 +6,29 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:CustomKontrole="using:FootballSimulator.CustomKontrole"
     x:Class="FootballSimulator.View.PanelOpcije"
-    mc:Ignorable="d" Width="750" Height="415">
+    mc:Ignorable="d">
 
-    <Grid Margin="0,0,0,0">
+    <Grid Margin="0,0,0,0" Padding="5">
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Background.jpg"/>
         </Grid.Background>
 
-        <CustomKontrole:ToolBar x:Name="ToolBar" HorizontalAlignment="Left" Margin="95,37,0,0" VerticalAlignment="Top" BorderBrush="#FFF91818"/>
-        <Image HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="61" Margin="10,10,0,0" Source="/Assets/Logo.png">
-        </Image>
-        <Button Content="Spasi" HorizontalAlignment="Left" Margin="650,373,0,0" VerticalAlignment="Top" Background="#9911B3FF"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <CustomKontrole:ToolBar x:Name="ToolBar" MinHeight="40" HorizontalAlignment="Stretch" VerticalAlignment="Center" BorderBrush="#FFF91818" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" Margin="20,0"/>
+        <Button x:Name="buttonSpasi" Content="Spasi" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="Auto" Width="Auto" Background="#CC0471B0" Grid.Column="2" Grid.Row="3"/>
+
+        <Image HorizontalAlignment="Center" Height="Auto" VerticalAlignment="Center" Width="Auto" Source="/Assets/Logo.png" Grid.Column="0" Grid.Row="0"/>
     </Grid>
+
 </Page>
