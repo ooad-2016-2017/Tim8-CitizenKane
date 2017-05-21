@@ -8,5 +8,28 @@ namespace FootballSimulator.Model
 {
     class Rezultat
     {
+        // Atributi
+        int domaci, gosti;
+
+        // Properties
+        public int Domaci { get => domaci; set => domaci = value; }
+        public int Gosti { get => gosti; set => gosti = value; }
+
+        // Konstruktori
+        public Rezultat(int domaci, int gosti)
+        {
+            this.Domaci = domaci;
+            this.Gosti = gosti;
+        }
+        public Rezultat()
+        {
+            domaci = gosti = 0;
+        }
+
+        // Metode
+        public override string ToString()
+        {
+            return Convert.ToString(domaci) + " : " + Convert.ToString(gosti);
+        }
     }
 }
