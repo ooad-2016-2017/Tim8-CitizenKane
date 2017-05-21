@@ -26,5 +26,15 @@ namespace FootballSimulator.View
         {
             this.InitializeComponent();
         }
+
+        private void buttonSimulacija_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MenuSimulacija), null);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(PanelTaktika), null);
+        }
     }
 }

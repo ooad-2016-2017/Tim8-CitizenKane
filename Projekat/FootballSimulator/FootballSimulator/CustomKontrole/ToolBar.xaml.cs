@@ -17,6 +17,7 @@ using Windows.UI.Xaml.Navigation;
 
 namespace FootballSimulator.CustomKontrole
 {
+
     public sealed partial class ToolBar : UserControl
     {
         public ToolBar()
