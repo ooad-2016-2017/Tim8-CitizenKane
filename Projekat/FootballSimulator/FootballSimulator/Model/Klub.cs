@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,14 +10,64 @@ namespace FootballSimulator.Model
     class Klub
     {
         // Atributi
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        private String id;
         Tim ekipa;
         double racun;
         StatistikaKluba statistika;
 
-        // Properties
-        public double Racun { get => racun; set => racun = value; }
-        public Tim Ekipa { get => ekipa; set => ekipa = value; }
-        public StatistikaKluba Statistika { get => statistika; set => statistika = value; }
+        public string Id
+        {
+            get
+            {
+                return id;
+            }
+
+            set
+            {
+                id = value;
+            }
+        }
+
+        internal Tim Ekipa
+        {
+            get
+            {
+                return ekipa;
+            }
+
+            set
+            {
+                ekipa = value;
+            }
+        }
+
+        public double Racun
+        {
+            get
+            {
+                return racun;
+            }
+
+            set
+            {
+                racun = value;
+            }
+        }
+
+        internal StatistikaKluba Statistika
+        {
+            get
+            {
+                return statistika;
+            }
+
+            set
+            {
+                statistika = value;
+            }
+        }
+
 
         // Konstruktori
         public Klub()

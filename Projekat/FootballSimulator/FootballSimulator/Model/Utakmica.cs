@@ -9,17 +9,90 @@ namespace FootballSimulator.Model
     class Utakmica
     {
         // Atributi
+        private String id;
         Tim domaci;
         Tim gosti;
         Rezultat rezultat;
         List<Igrac> strijelci;
         bool odigrana;
 
-        // Properties
-        public Tim Domaci { get => domaci; set => domaci = value; }
-        public Tim Gosti { get => gosti; set => gosti = value; }
-        public Rezultat Rezultat { get => rezultat; set => rezultat = value; }
-        public List<Igrac> Strijelci { get => strijelci; set => strijelci = value; }
+        public string Id
+        {
+            get
+            {
+                return id;
+            }
+
+            set
+            {
+                id = value;
+            }
+        }
+
+        internal Tim Domaci
+        {
+            get
+            {
+                return domaci;
+            }
+
+            set
+            {
+                domaci = value;
+            }
+        }
+
+        internal Tim Gosti
+        {
+            get
+            {
+                return gosti;
+            }
+
+            set
+            {
+                gosti = value;
+            }
+        }
+
+        internal Rezultat Rezultat
+        {
+            get
+            {
+                return rezultat;
+            }
+
+            set
+            {
+                rezultat = value;
+            }
+        }
+
+        internal List<Igrac> Strijelci
+        {
+            get
+            {
+                return strijelci;
+            }
+
+            set
+            {
+                strijelci = value;
+            }
+        }
+
+        public bool Odigrana
+        {
+            get
+            {
+                return odigrana;
+            }
+
+            set
+            {
+                odigrana = value;
+            }
+        }
 
         // Konstruktori
         public Utakmica()

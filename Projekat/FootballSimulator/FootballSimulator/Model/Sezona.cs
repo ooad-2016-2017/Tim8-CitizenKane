@@ -9,16 +9,77 @@ namespace FootballSimulator.Model
     class Sezona
     {
         // Atributi
+        private String id;
         List<Klub> timovi;
         List<Kolo> kola;
         int mojKlub; // indeks kluba u listi klubova (trebalo bi namjestiti da je 0)
         int trenutnoKolo;
 
-        // Properties
-        public int TrenutnoKolo { get => trenutnoKolo; set => trenutnoKolo = value; }
-        public List<Klub> Timovi { get => timovi; set => timovi = value; }
-        public List<Kolo> Kola { get => kola; set => kola = value; }
-        public int MojKlub { get => mojKlub; set => mojKlub = value; }
+        public string Id
+        {
+            get
+            {
+                return id;
+            }
+
+            set
+            {
+                id = value;
+            }
+        }
+
+        internal List<Klub> Timovi
+        {
+            get
+            {
+                return timovi;
+            }
+
+            set
+            {
+                timovi = value;
+            }
+        }
+
+        internal List<Kolo> Kola
+        {
+            get
+            {
+                return kola;
+            }
+
+            set
+            {
+                kola = value;
+            }
+        }
+
+        public int MojKlub
+        {
+            get
+            {
+                return mojKlub;
+            }
+
+            set
+            {
+                mojKlub = value;
+            }
+        }
+
+        public int TrenutnoKolo
+        {
+            get
+            {
+                return trenutnoKolo;
+            }
+
+            set
+            {
+                trenutnoKolo = value;
+            }
+        }
+
 
         // Konstruktori
         public Sezona()

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,21 +10,121 @@ namespace FootballSimulator.Model
     class Tim
     {
         // Atributi
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        private String id;
         String naziv;
         List<Igrac> pocetniSastav;
         List<Igrac> klupaSastav;
         List<Igrac> rezerveSastav;
         String formacija;
         Igrac kapiten;
-        Igrac dummy;
+        static Igrac dummy;
 
-        // Properties
-        public string Naziv { get => naziv; set => naziv = value; }
-        public List<Igrac> PocetniSastav { get => pocetniSastav; set => pocetniSastav = value; }
-        public List<Igrac> KlupaSastav { get => klupaSastav; set => klupaSastav = value; }
-        public List<Igrac> RezerveSastav { get => rezerveSastav; set => rezerveSastav = value; }
-        public string Formacija { get => formacija; set => formacija = value; }
-        public Igrac Kapiten { get => kapiten; set => kapiten = value; }
+        public string Naziv
+        {
+            get
+            {
+                return naziv;
+            }
+
+            set
+            {
+                naziv = value;
+            }
+        }
+
+        internal List<Igrac> PocetniSastav
+        {
+            get
+            {
+                return pocetniSastav;
+            }
+
+            set
+            {
+                pocetniSastav = value;
+            }
+        }
+
+        internal List<Igrac> KlupaSastav
+        {
+            get
+            {
+                return klupaSastav;
+            }
+
+            set
+            {
+                klupaSastav = value;
+            }
+        }
+
+        internal List<Igrac> RezerveSastav
+        {
+            get
+            {
+                return rezerveSastav;
+            }
+
+            set
+            {
+                rezerveSastav = value;
+            }
+        }
+
+        public string Formacija
+        {
+            get
+            {
+                return formacija;
+            }
+
+            set
+            {
+                formacija = value;
+            }
+        }
+
+        internal Igrac Kapiten
+        {
+            get
+            {
+                return kapiten;
+            }
+
+            set
+            {
+                kapiten = value;
+            }
+        }
+
+        internal static Igrac Dummy
+        {
+            get
+            {
+                return dummy;
+            }
+
+            set
+            {
+                dummy = value;
+            }
+        }
+
+        public string Id
+        {
+            get
+            {
+                return id;
+            }
+
+            set
+            {
+                id = value;
+            }
+        }
+
+
 
         // Konstruktori
         public Tim()
@@ -34,7 +135,7 @@ namespace FootballSimulator.Model
             this.RezerveSastav = new List<Igrac>();
             this.Formacija = "4-4-2";
             this.Kapiten = null;
-            this.dummy = new Igrac("", 0, 0, 0, 0, 0, 0);
+            dummy = new Igrac("", 0, 0, 0, 0, 0, 0);
         }
         public Tim(string naziv, List<Igrac> pocetniSastav, List<Igrac> klupaSastav, List<Igrac> rezerveSastav, string formacija, Igrac kapiten)
         {
@@ -44,7 +145,7 @@ namespace FootballSimulator.Model
             this.RezerveSastav = rezerveSastav;
             this.Formacija = formacija;
             this.Kapiten = kapiten;
-            this.dummy = new Igrac("", 0, 0, 0, 0, 0, 0);
+            dummy = new Igrac("", 0, 0, 0, 0, 0, 0);
         }
 
         // Metode

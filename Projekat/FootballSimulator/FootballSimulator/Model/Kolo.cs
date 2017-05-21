@@ -9,12 +9,51 @@ namespace FootballSimulator.Model
     class Kolo
     {
         // Atributi
+        private String id;
         List<Utakmica> utakmice;
         bool odigrano;
 
+        public string Id
+        {
+            get
+            {
+                return id;
+            }
+
+            set
+            {
+                id = value;
+            }
+        }
+
+        internal List<Utakmica> Utakmice
+        {
+            get
+            {
+                return utakmice;
+            }
+
+            set
+            {
+                utakmice = value;
+            }
+        }
+
+        public bool Odigrano
+        {
+            get
+            {
+                return odigrano;
+            }
+
+            set
+            {
+                odigrano = value;
+            }
+        }
+
         // Properties
-        public List<Utakmica> Utakmice { get => utakmice; set => utakmice = value; }
-        public bool Odigrano { get => odigrano; set => odigrano = value; }
+
 
         // Konstruktori
         public Kolo()

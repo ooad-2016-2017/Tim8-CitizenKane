@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,8 @@ namespace FootballSimulator.Model
     class Igrac
     {
         // Osnovni atributi
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        private String id;
         String ime;
         int godine;
         double cijena;
@@ -16,18 +19,162 @@ namespace FootballSimulator.Model
         int stamina, gk, def, mid, att, postignutiGolovi, cleanSheet;
         bool suspendovan;
 
-        // Properties
-        public string Ime { get => ime; set => ime = value; }
-        public int Godine { get => godine; set => godine = value; }
-        public double Cijena { get => cijena; set => cijena = value; }
-        public int Stamina { get => stamina; set => stamina = value; }
-        public int GK { get => gk; set => gk = value; }
-        public int DEF { get => def; set => def = value; }
-        public int MID { get => mid; set => mid = value; }
-        public int ATT { get => att; set => att = value; }
-        public int PostignutiGolovi { get => postignutiGolovi; set => postignutiGolovi = value; }
-        public int CleanSheet { get => cleanSheet; set => cleanSheet = value; }
-        public bool Suspendovan { get => suspendovan; set => suspendovan = value; }
+        public string Id
+        {
+            get
+            {
+                return id;
+            }
+
+            set
+            {
+                id = value;
+            }
+        }
+
+        public string Ime
+        {
+            get
+            {
+                return ime;
+            }
+
+            set
+            {
+                ime = value;
+            }
+        }
+
+        public int Godine
+        {
+            get
+            {
+                return godine;
+            }
+
+            set
+            {
+                godine = value;
+            }
+        }
+
+        public double Cijena
+        {
+            get
+            {
+                return cijena;
+            }
+
+            set
+            {
+                cijena = value;
+            }
+        }
+
+        public int Stamina
+        {
+            get
+            {
+                return stamina;
+            }
+
+            set
+            {
+                stamina = value;
+            }
+        }
+
+        public int Gk
+        {
+            get
+            {
+                return gk;
+            }
+
+            set
+            {
+                gk = value;
+            }
+        }
+
+        public int Def
+        {
+            get
+            {
+                return def;
+            }
+
+            set
+            {
+                def = value;
+            }
+        }
+
+        public int Mid
+        {
+            get
+            {
+                return mid;
+            }
+
+            set
+            {
+                mid = value;
+            }
+        }
+
+        public int Att
+        {
+            get
+            {
+                return att;
+            }
+
+            set
+            {
+                att = value;
+            }
+        }
+
+        public int PostignutiGolovi
+        {
+            get
+            {
+                return postignutiGolovi;
+            }
+
+            set
+            {
+                postignutiGolovi = value;
+            }
+        }
+
+        public int CleanSheet
+        {
+            get
+            {
+                return cleanSheet;
+            }
+
+            set
+            {
+                cleanSheet = value;
+            }
+        }
+
+        public bool Suspendovan
+        {
+            get
+            {
+                return suspendovan;
+            }
+
+            set
+            {
+                suspendovan = value;
+            }
+        }
+
 
         // Konstruktori
         public Igrac() // default
@@ -50,10 +197,10 @@ namespace FootballSimulator.Model
             this.godine = i.godine;
             this.cijena = i.cijena;
             this.stamina = i.stamina;
-            GK = i.GK;
-            DEF = i.DEF;
-            MID = i.MID;
-            ATT = i.ATT;
+            Gk = i.Gk;
+            Def = i.Def;
+            Mid = i.Mid;
+            Att = i.Att;
             this.postignutiGolovi = i.postignutiGolovi;
             this.cleanSheet = i.cleanSheet;
             this.suspendovan = i.suspendovan;
@@ -64,10 +211,10 @@ namespace FootballSimulator.Model
             this.godine = godine;
             this.cijena = cijena;
             this.stamina = umor;
-            GK = gK;
-            DEF = dEF;
-            MID = mID;
-            ATT = aTT;
+            Gk = gK;
+            Def = dEF;
+            Mid = mID;
+            Att = aTT;
             this.postignutiGolovi = postignutiGolovi;
             this.cleanSheet = cleanSheet;
             this.suspendovan = suspendovan;
@@ -77,10 +224,10 @@ namespace FootballSimulator.Model
             this.ime = ime;
             this.godine = godine;
             this.cijena = cijena;
-            GK = gK;
-            DEF = dEF;
-            MID = mID;
-            ATT = aTT;
+            Gk = gK;
+            Def = dEF;
+            Mid = mID;
+            Att = aTT;
             this.postignutiGolovi = 0;
             this.cleanSheet = 0;
             this.suspendovan = false;

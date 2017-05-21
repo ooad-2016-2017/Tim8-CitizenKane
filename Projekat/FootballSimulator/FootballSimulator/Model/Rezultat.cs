@@ -9,11 +9,48 @@ namespace FootballSimulator.Model
     class Rezultat
     {
         // Atributi
+        private String id;
         int domaci, gosti;
 
-        // Properties
-        public int Domaci { get => domaci; set => domaci = value; }
-        public int Gosti { get => gosti; set => gosti = value; }
+        public string Id
+        {
+            get
+            {
+                return id;
+            }
+
+            set
+            {
+                id = value;
+            }
+        }
+
+        public int Domaci
+        {
+            get
+            {
+                return domaci;
+            }
+
+            set
+            {
+                domaci = value;
+            }
+        }
+
+        public int Gosti
+        {
+            get
+            {
+                return gosti;
+            }
+
+            set
+            {
+                gosti = value;
+            }
+        }
+
 
         // Konstruktori
         public Rezultat(int domaci, int gosti)

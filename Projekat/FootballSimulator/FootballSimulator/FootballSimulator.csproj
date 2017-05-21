@@ -110,6 +110,7 @@
     <Compile Include="Model\Kolo.cs" />
     <Compile Include="Model\RadSaDatotekama.cs" />
     <Compile Include="Model\Rezultat.cs" />
+    <Compile Include="Model\Services\TimService.cs" />
     <Compile Include="Model\Sezona.cs" />
     <Compile Include="Model\SezonaXML.cs" />
     <Compile Include="Model\StatistikaKluba.cs" />

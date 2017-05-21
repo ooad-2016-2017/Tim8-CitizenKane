@@ -9,15 +9,99 @@ namespace FootballSimulator.Model
     class StatistikaKluba
     {
         // Atributi
+        private String id;
         int bodovi, postignutiGolovi, primljeniGolovi, pobjede, remi, porazi;
 
-        // Properties
-        public int Bodovi { get => bodovi; set => bodovi = value; }
-        public int PostignutiGolovi { get => postignutiGolovi; set => postignutiGolovi = value; }
-        public int PrimljeniGolovi { get => primljeniGolovi; set => primljeniGolovi = value; }
-        public int Pobjede { get => pobjede; set => pobjede = value; }
-        public int Remi { get => remi; set => remi = value; }
-        public int Porazi { get => porazi; set => porazi = value; }
+        public string Id
+        {
+            get
+            {
+                return id;
+            }
+
+            set
+            {
+                id = value;
+            }
+        }
+
+        public int Bodovi
+        {
+            get
+            {
+                return bodovi;
+            }
+
+            set
+            {
+                bodovi = value;
+            }
+        }
+
+        public int PostignutiGolovi
+        {
+            get
+            {
+                return postignutiGolovi;
+            }
+
+            set
+            {
+                postignutiGolovi = value;
+            }
+        }
+
+        public int PrimljeniGolovi
+        {
+            get
+            {
+                return primljeniGolovi;
+            }
+
+            set
+            {
+                primljeniGolovi = value;
+            }
+        }
+
+        public int Pobjede
+        {
+            get
+            {
+                return pobjede;
+            }
+
+            set
+            {
+                pobjede = value;
+            }
+        }
+
+        public int Remi
+        {
+            get
+            {
+                return remi;
+            }
+
+            set
+            {
+                remi = value;
+            }
+        }
+
+        public int Porazi
+        {
+            get
+            {
+                return porazi;
+            }
+
+            set
+            {
+                porazi = value;
+            }
+        }
 
         // Konstruktori
         public StatistikaKluba()
