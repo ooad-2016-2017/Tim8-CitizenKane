@@ -12,6 +12,7 @@ namespace FootballSimulator.Model
         private String id;
         int domaci, gosti;
 
+        // Properties
         public string Id
         {
             get
@@ -24,7 +25,6 @@ namespace FootballSimulator.Model
                 id = value;
             }
         }
-
         public int Domaci
         {
             get
@@ -37,7 +37,6 @@ namespace FootballSimulator.Model
                 domaci = value;
             }
         }
-
         public int Gosti
         {
             get
@@ -53,15 +52,16 @@ namespace FootballSimulator.Model
 
 
         // Konstruktori
+        public Rezultat()
+        {
+            domaci = gosti = 0;
+        }
         public Rezultat(int domaci, int gosti)
         {
             this.Domaci = domaci;
             this.Gosti = gosti;
         }
-        public Rezultat()
-        {
-            domaci = gosti = 0;
-        }
+       
 
         // Metode
         public override string ToString()

@@ -12,6 +12,7 @@ namespace FootballSimulator.Model
         private String id;
         int bodovi, postignutiGolovi, primljeniGolovi, pobjede, remi, porazi;
 
+        // Properties
         public string Id
         {
             get
@@ -24,7 +25,6 @@ namespace FootballSimulator.Model
                 id = value;
             }
         }
-
         public int Bodovi
         {
             get
@@ -37,7 +37,6 @@ namespace FootballSimulator.Model
                 bodovi = value;
             }
         }
-
         public int PostignutiGolovi
         {
             get
@@ -50,7 +49,6 @@ namespace FootballSimulator.Model
                 postignutiGolovi = value;
             }
         }
-
         public int PrimljeniGolovi
         {
             get
@@ -63,7 +61,6 @@ namespace FootballSimulator.Model
                 primljeniGolovi = value;
             }
         }
-
         public int Pobjede
         {
             get
@@ -76,7 +73,6 @@ namespace FootballSimulator.Model
                 pobjede = value;
             }
         }
-
         public int Remi
         {
             get
@@ -89,7 +85,6 @@ namespace FootballSimulator.Model
                 remi = value;
             }
         }
-
         public int Porazi
         {
             get

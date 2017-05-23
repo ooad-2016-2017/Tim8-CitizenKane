@@ -36,5 +36,10 @@ namespace FootballSimulator.View
         {
             Frame.Navigate(typeof(PanelTaktika), null);
         }
+
+        private void buttonIzlaz_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Exit();
+        }
     }
 }

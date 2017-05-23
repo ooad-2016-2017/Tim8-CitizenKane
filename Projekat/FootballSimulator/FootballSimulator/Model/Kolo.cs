@@ -12,7 +12,8 @@ namespace FootballSimulator.Model
         private String id;
         List<Utakmica> utakmice;
         bool odigrano;
-
+        
+        // Properties
         public string Id
         {
             get
@@ -25,8 +26,7 @@ namespace FootballSimulator.Model
                 id = value;
             }
         }
-
-        internal List<Utakmica> Utakmice
+        public List<Utakmica> Utakmice
         {
             get
             {
@@ -38,7 +38,6 @@ namespace FootballSimulator.Model
                 utakmice = value;
             }
         }
-
         public bool Odigrano
         {
             get
@@ -50,10 +49,7 @@ namespace FootballSimulator.Model
             {
                 odigrano = value;
             }
-        }
-
-        // Properties
-
+        }      
 
         // Konstruktori
         public Kolo()

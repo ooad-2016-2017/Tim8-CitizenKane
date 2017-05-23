@@ -20,6 +20,7 @@ namespace FootballSimulator.Model
         Igrac kapiten;
         static Igrac dummy;
 
+        // Properties
         public string Naziv
         {
             get
@@ -32,8 +33,7 @@ namespace FootballSimulator.Model
                 naziv = value;
             }
         }
-
-        internal List<Igrac> PocetniSastav
+        public List<Igrac> PocetniSastav
         {
             get
             {
@@ -45,8 +45,7 @@ namespace FootballSimulator.Model
                 pocetniSastav = value;
             }
         }
-
-        internal List<Igrac> KlupaSastav
+        public List<Igrac> KlupaSastav
         {
             get
             {
@@ -58,8 +57,7 @@ namespace FootballSimulator.Model
                 klupaSastav = value;
             }
         }
-
-        internal List<Igrac> RezerveSastav
+        public List<Igrac> RezerveSastav
         {
             get
             {
@@ -71,7 +69,6 @@ namespace FootballSimulator.Model
                 rezerveSastav = value;
             }
         }
-
         public string Formacija
         {
             get
@@ -84,8 +81,7 @@ namespace FootballSimulator.Model
                 formacija = value;
             }
         }
-
-        internal Igrac Kapiten
+        public Igrac Kapiten
         {
             get
             {
@@ -97,8 +93,7 @@ namespace FootballSimulator.Model
                 kapiten = value;
             }
         }
-
-        internal static Igrac Dummy
+        public static Igrac Dummy
         {
             get
             {
@@ -110,7 +105,6 @@ namespace FootballSimulator.Model
                 dummy = value;
             }
         }
-
         public string Id
         {
             get

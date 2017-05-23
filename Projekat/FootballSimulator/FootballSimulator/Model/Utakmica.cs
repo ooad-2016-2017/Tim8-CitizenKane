@@ -16,6 +16,7 @@ namespace FootballSimulator.Model
         List<Igrac> strijelci;
         bool odigrana;
 
+        // Properties
         public string Id
         {
             get
@@ -28,8 +29,7 @@ namespace FootballSimulator.Model
                 id = value;
             }
         }
-
-        internal Tim Domaci
+        public Tim Domaci
         {
             get
             {
@@ -41,8 +41,7 @@ namespace FootballSimulator.Model
                 domaci = value;
             }
         }
-
-        internal Tim Gosti
+        public Tim Gosti
         {
             get
             {
@@ -54,8 +53,7 @@ namespace FootballSimulator.Model
                 gosti = value;
             }
         }
-
-        internal Rezultat Rezultat
+        public Rezultat Rezultat
         {
             get
             {
@@ -67,8 +65,7 @@ namespace FootballSimulator.Model
                 rezultat = value;
             }
         }
-
-        internal List<Igrac> Strijelci
+        public List<Igrac> Strijelci
         {
             get
             {
@@ -80,7 +77,6 @@ namespace FootballSimulator.Model
                 strijelci = value;
             }
         }
-
         public bool Odigrana
         {
             get

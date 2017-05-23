@@ -16,6 +16,7 @@ namespace FootballSimulator.Model
         double racun;
         StatistikaKluba statistika;
 
+        // Properties
         public string Id
         {
             get
@@ -28,8 +29,7 @@ namespace FootballSimulator.Model
                 id = value;
             }
         }
-
-        internal Tim Ekipa
+        public Tim Ekipa
         {
             get
             {
@@ -41,7 +41,6 @@ namespace FootballSimulator.Model
                 ekipa = value;
             }
         }
-
         public double Racun
         {
             get
@@ -54,8 +53,7 @@ namespace FootballSimulator.Model
                 racun = value;
             }
         }
-
-        internal StatistikaKluba Statistika
+        public StatistikaKluba Statistika
         {
             get
             {
@@ -67,7 +65,7 @@ namespace FootballSimulator.Model
                 statistika = value;
             }
         }
-
+        
 
         // Konstruktori
         public Klub()

@@ -15,6 +15,7 @@ namespace FootballSimulator.Model
         int mojKlub; // indeks kluba u listi klubova (trebalo bi namjestiti da je 0)
         int trenutnoKolo;
 
+        // Properties
         public string Id
         {
             get
@@ -27,8 +28,7 @@ namespace FootballSimulator.Model
                 id = value;
             }
         }
-
-        internal List<Klub> Timovi
+        public List<Klub> Timovi
         {
             get
             {
@@ -40,8 +40,7 @@ namespace FootballSimulator.Model
                 timovi = value;
             }
         }
-
-        internal List<Kolo> Kola
+        public List<Kolo> Kola
         {
             get
             {
@@ -53,7 +52,6 @@ namespace FootballSimulator.Model
                 kola = value;
             }
         }
-
         public int MojKlub
         {
             get
@@ -66,7 +64,6 @@ namespace FootballSimulator.Model
                 mojKlub = value;
             }
         }
-
         public int TrenutnoKolo
         {
             get
@@ -98,7 +95,10 @@ namespace FootballSimulator.Model
         }
         public Sezona(Klub mojTim, List<Klub> ostaliTimovi)
         {
-
+            this.timovi = ostaliTimovi;
+            this.kola = generisiKola();
+            this.mojKlub = ostaliTimovi.FindIndex((x) => x.Id == mojTim.Id);
+            this.trenutnoKolo = 0;
         }
 
         // Metode
@@ -123,9 +123,11 @@ namespace FootballSimulator.Model
             // dodati algoritam za racunanje najboljih golmana
             return golmani;
         }
-        public void generisiKola()
+        public List<Kolo> generisiKola()
         {
             // dodati algoritam za generisanje kola
+            return new List<Kolo>(); // privremeno da kompajlira :(
+
         }
         public Kolo dajTrenutnoKolo()
         {

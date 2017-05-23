@@ -30,7 +30,7 @@
             <Button x:Name="buttonSimulacija" MinWidth="190" MaxWidth="500" Content="Simulacija" HorizontalAlignment="Center" VerticalAlignment="Top" Height="40" Width="Auto" Background="#99354ACF" Margin="0,15,0,0" Click="buttonSimulacija_Click"/>
             <Button x:Name="buttonOsvjezavanje" MinWidth="190" MaxWidth="300" Content="Osvježavanje podataka" HorizontalAlignment="Center" VerticalAlignment="Top" Width="Auto" Height="40" Background="#99354ACF" Margin="0,5,0,0"/>
             <Button x:Name="buttonOpcije" MinWidth="190" MaxWidth="300" Content="Opcije" HorizontalAlignment="Center" VerticalAlignment="Top" Width="Auto" Height="40" Background="#99354ACF" Margin="0,5,0,0"/>
-            <Button x:Name="buttonIzlaz" MinWidth="190" MaxWidth="300" Content="Izlaz" HorizontalAlignment="Center" VerticalAlignment="Top" Width="Auto" Height="40" Background="#99354ACF" Margin="0,5,0,0"/>
+            <Button x:Name="buttonIzlaz" MinWidth="190" MaxWidth="300" Content="Izlaz" HorizontalAlignment="Center" VerticalAlignment="Top" Width="Auto" Height="40" Background="#99354ACF" Margin="0,5,0,0" Click="buttonIzlaz_Click"/>
 
             <Button Content="Temp button" Click="Button_Click"/>
         </StackPanel>

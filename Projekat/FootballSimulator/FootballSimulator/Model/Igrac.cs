@@ -19,6 +19,7 @@ namespace FootballSimulator.Model
         int stamina, gk, def, mid, att, postignutiGolovi, cleanSheet;
         bool suspendovan;
 
+        // Properties
         public string Id
         {
             get
@@ -31,7 +32,6 @@ namespace FootballSimulator.Model
                 id = value;
             }
         }
-
         public string Ime
         {
             get
@@ -44,7 +44,6 @@ namespace FootballSimulator.Model
                 ime = value;
             }
         }
-
         public int Godine
         {
             get
@@ -57,7 +56,6 @@ namespace FootballSimulator.Model
                 godine = value;
             }
         }
-
         public double Cijena
         {
             get
@@ -70,7 +68,6 @@ namespace FootballSimulator.Model
                 cijena = value;
             }
         }
-
         public int Stamina
         {
             get
@@ -83,7 +80,6 @@ namespace FootballSimulator.Model
                 stamina = value;
             }
         }
-
         public int Gk
         {
             get
@@ -96,7 +92,6 @@ namespace FootballSimulator.Model
                 gk = value;
             }
         }
-
         public int Def
         {
             get
@@ -109,7 +104,6 @@ namespace FootballSimulator.Model
                 def = value;
             }
         }
-
         public int Mid
         {
             get
@@ -122,7 +116,6 @@ namespace FootballSimulator.Model
                 mid = value;
             }
         }
-
         public int Att
         {
             get
@@ -135,7 +128,6 @@ namespace FootballSimulator.Model
                 att = value;
             }
         }
-
         public int PostignutiGolovi
         {
             get
@@ -148,7 +140,6 @@ namespace FootballSimulator.Model
                 postignutiGolovi = value;
             }
         }
-
         public int CleanSheet
         {
             get
@@ -161,7 +152,6 @@ namespace FootballSimulator.Model
                 cleanSheet = value;
             }
         }
-
         public bool Suspendovan
         {
             get
