@@ -105,12 +105,12 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\SimulatorContext.cs" />
     <Compile Include="Model\Igrac.cs" />
     <Compile Include="Model\Klub.cs" />
     <Compile Include="Model\Kolo.cs" />
     <Compile Include="Model\RadSaDatotekama.cs" />
     <Compile Include="Model\Rezultat.cs" />
-    <Compile Include="Model\Services\TimService.cs" />
     <Compile Include="Model\Sezona.cs" />
     <Compile Include="Model\SezonaXML.cs" />
     <Compile Include="Model\StatistikaKluba.cs" />

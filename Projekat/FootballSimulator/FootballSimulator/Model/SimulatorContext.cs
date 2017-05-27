@@ -7,11 +7,17 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Storage;
 
-namespace FootballSimulator.Model.Services
+namespace FootballSimulator.Model
 {
-    class TimService : DbContext
+    class SimulatorContext : DbContext
     {
         public DbSet<Tim> Timovi { get; set; }
+        public DbSet<Igrac> Igraci { get; set; }
+        public DbSet<Sezona> Sezone { get; set; }
+        public DbSet<Klub> Klubovi { get; set; }
+        public DbSet<StatistikaKluba> Statistike { get; set; }
+        public DbSet<Kolo> Kola { get; set; }
+        public DbSet<Utakmica> Utakmice { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -29,7 +35,8 @@ namespace FootballSimulator.Model.Services
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            
+            //Foreign keys
+
         }
     }
 }
