@@ -113,24 +113,6 @@ namespace FootballSimulator.Model
             }
             return lista;
         }
-        public List<Igrac> najboljiStrijelci()
-        {
-            List<Igrac> strijelci = new List<Igrac>();
-            // dodati algoritam za racunanje najboljih strijelaca
-            return strijelci;
-        }
-        public List<Igrac> najboljiGolmani()
-        {
-            List<Igrac> golmani = new List<Igrac>();
-            // dodati algoritam za racunanje najboljih golmana
-            return golmani;
-        }
-        public List<Kolo> generisiKola()
-        {
-            // dodati algoritam za generisanje kola
-            return new List<Kolo>(); // privremeno da kompajlira :(
-
-        }
         public Kolo dajTrenutnoKolo()
         {
             return kola[trenutnoKolo - 1]; // lista pocinje od 0 a kola od 1
@@ -150,6 +132,44 @@ namespace FootballSimulator.Model
         {
             return timovi.Count * 2 - 2;
         }
+        public List<Kolo> generisiKola()
+        {
+            // dodati algoritam za generisanje kola
+            return new List<Kolo>(); // privremeno da kompajlira :(
 
+        }
+        public List<Igrac> najboljiStrijelci()
+        {
+            List<Igrac> strijelci = new List<Igrac>();
+            for(int i = 0; i < timovi.Count; i++)
+            {
+                for(int j = 0; j<timovi[i].Ekipa.dajUkupanBrojIgraca(); j++)
+                {
+                    for(int k = 0; k < strijelci.Count; k++)
+                    {
+                        if (strijelci[k].PostignutiGolovi < timovi[i].Ekipa.dajSveIgrace()[j].PostignutiGolovi)
+                            strijelci[k] = timovi[i].Ekipa.dajSveIgrace()[j];
+                    }
+                }
+            }
+            return strijelci;
+        }
+        public List<Igrac> najboljiGolmani()
+        {
+            List<Igrac> golmani = new List<Igrac>(5);
+            // Top 5 najboljih
+            for(int i = 0; i < timovi.Count; i++)
+            {
+                for(int j = 0; j < timovi[i].Ekipa.dajUkupanBrojIgraca(); j++)
+                {
+                    for(int k = 0; k < golmani.Count; k++)
+                    {
+                        if (golmani[k].CleanSheet < timovi[i].Ekipa.dajSveIgrace()[j].CleanSheet)
+                            golmani[k] = timovi[i].Ekipa.dajSveIgrace()[j];
+                    }
+                }
+            }
+            return golmani;
+        }
     }
 }
