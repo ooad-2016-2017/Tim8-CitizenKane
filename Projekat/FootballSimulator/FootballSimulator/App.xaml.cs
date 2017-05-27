@@ -1,11 +1,11 @@
 ﻿using FootballSimulator.Model;
+using Microsoft.EntityFrameworkCore;
 using System;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
-using Microsoft.Data.Entity;
 
 namespace FootballSimulator
 {
@@ -25,7 +25,7 @@ namespace FootballSimulator
 
             using (var db = new SimulatorContext())
             {
-                db.Database.ApplyMigrations();
+                db.Database.Migrate();
             }
 
         }
