@@ -109,6 +109,10 @@
     <Compile Include="Migrations\20170527212705_InitialMigration.designer.cs">
       <DependentUpon>20170527212705_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20170527225446_TimModelEdited.cs" />
+    <Compile Include="Migrations\20170527225446_TimModelEdited.designer.cs">
+      <DependentUpon>20170527225446_TimModelEdited.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\SimulatorContextModelSnapshot.cs" />
     <Compile Include="Model\SimulatorContext.cs" />
     <Compile Include="Model\Igrac.cs" />

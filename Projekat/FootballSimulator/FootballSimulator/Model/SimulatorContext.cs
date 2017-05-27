@@ -35,8 +35,7 @@ namespace FootballSimulator.Model
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //Foreign keys
-
+            //TODO: dodati many to many veze
         }
     }
 }
