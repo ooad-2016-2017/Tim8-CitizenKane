@@ -74,10 +74,8 @@ namespace FootballSimulator.Model
         public int odigraj()
         {
             if (!Odigrano) {
-                foreach (Utakmica u in Utakmice)
-                {
-                    u.odigraj();
-                }
+                for (int i = 0; i < utakmice.Count; i++)
+                    utakmice[i].odigraj();
                 Odigrano = true;
             }
             else

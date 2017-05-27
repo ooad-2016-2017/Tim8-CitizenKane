@@ -230,6 +230,14 @@ namespace FootballSimulator.Model
                 i = rezerveSastav[pozicija - 16];
             return i;
         }
+        public List<Igrac> dajSveIgrace()
+        {
+            List<Igrac> lista = new List<Igrac>();
+            lista.AddRange(pocetniSastav);
+            lista.AddRange(klupaSastav);
+            lista.AddRange(rezerveSastav);
+            return lista;
+        }
             
     }
 }
