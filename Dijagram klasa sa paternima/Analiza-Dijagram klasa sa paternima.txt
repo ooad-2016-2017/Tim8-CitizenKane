@@ -1,0 +1,25 @@
+Pored paterna koji se uklapaju u sadašnju prirodu sistema, redizajniran sistem klasa se sastoji i od prikaza potencijalnih primjena odgovarajucih paterna
+u  slucaju želje za nadogradnjom sistema.
+
+Što se tice Adapter paterna, priroda našeg sistema je trenutno takva da nema svoju konkretnu primjenu. Medutim, u buducnosti u slucaju nadogradnje i eventualnog
+modifikovanja nekih funkcionalnosti, nacina prikaza pojedinih detalja korisniku u toku simulacije postoje naznake za potencijalne primjene ovog paterna.
+Npr. u slucaju da nekada dode do potrebe za drugacijim, nadogradenijim prikazom tabele koristili bi adapter patern, koji bi prilagodio podatke u zahtijevani prikaz,
+pri cemu bi i dalje bio korišten interfejs klase statistikaKluba, uz neke željene izmjene sto bi radila novododana adapter klasa. Ovaj patern bi mogao biti korišten
+i u slucaju nadogradnje opcija za simulaciju jedne utakmice, gdje bi npr. u slucaju da se uvede opcija mogucnosti Onemogucavanja mogucnosti povrede uveli adapter klasu
+koja bi spajala novi nacin simulacije utakmice sa vec postojecim tako što bi samo dodali još dodali postavljanje povreda svih igraca na "nepovrijeden".
+Poenta je jasna, adapter patern bi sigurno imao svoje primjene pri potencijalnim nadogradnjama sistema.
+
+Izdvojili bi takoder potencijalnu mogucnost primjene bridge paterna. Kada bi se npr. odlucili za nadogradnju sistema tako da pri simulaciji utakmica imamo razlicite
+tipova utakmica (prijateljska, ligaška, liga prvaka, ...) pri cemu bi se razlicitost ogledala jedino u implementaciji metode odigraj() (tj. drugaciji algoritam za
+ove tipove), pogodan bi bio ovaj patern. Napravili bi interface za odigraj(), što bi bio Bridge, a zatim bi imali više razlicitih implementacija za tu jednu apstrakciju.
+
+Proxy patern se jako dobro uklapa u prirodu našeg rješenja, gdje bi se njegova primjena ogledala u kontroli pristupa metodama u klasi ViewModelRadSaDatotekama.
+Primjenljivost paterna dolazi do izražaja kada metode ove klase poziva moderator sistema sa drugacijim pravom pristupa u odnosu na korisnika sistema, kojem su
+dozvoljene samo neke od metoda iz pomenute klase.
+
+Singleton patern se takoder uklapa, pri cemu se primjenjuje na klasi simulatorOpcije, koja se instancira samo jednom i koja je, kao pojedinacna klasa, u funkciji u toku
+citave simulacije. Patern je primijenjen na adekvatan nacin, sa izvršenim dodavanjem svih predefinisanih funkcionalnosti paterna.
+
+Konacno, builder patern bi našao svoju primjenu npr. u potencijalnom kreiranju liste najuspjecnijih rezultata na kraju sezone, pri cemu bi postojala klasa NajuspjesnijiRezultati
+koja bi se sastojala od objekata razlicitih tipova koji bi se dodavali zadovoljavanjem nekih uslova ovisno od ideje i nacina implementacije.
+
