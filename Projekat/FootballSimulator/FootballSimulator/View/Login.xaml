@@ -36,6 +36,7 @@
                         <Setter Property="Background" Value="#0F0129" />
                         <Setter Property="Margin" Value="1" />
                         <Setter Property="Opacity" Value="0.75"/>
+                        <Setter Property="Foreground" Value="LightGray"/>
                     </Style>
                 </ListBox.Resources>
                 <ListBoxItem>Irhad</ListBoxItem>
