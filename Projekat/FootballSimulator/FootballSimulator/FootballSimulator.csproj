@@ -105,16 +105,13 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20170527212705_InitialMigration.cs" />
-    <Compile Include="Migrations\20170527212705_InitialMigration.designer.cs">
-      <DependentUpon>20170527212705_InitialMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20170527225446_TimModelEdited.cs" />
-    <Compile Include="Migrations\20170527225446_TimModelEdited.designer.cs">
-      <DependentUpon>20170527225446_TimModelEdited.cs</DependentUpon>
+    <Compile Include="Migrations\20170528141643_PrvaMigracija.cs" />
+    <Compile Include="Migrations\20170528141643_PrvaMigracija.designer.cs">
+      <DependentUpon>20170528141643_PrvaMigracija.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\SimulatorContextModelSnapshot.cs" />
-    <Compile Include="Model\SimulatorContext.cs" />
+    <Compile Include="Model\Database\SimulatorContext.cs" />
+    <Compile Include="Model\Database\UtakmicaIgrac.cs" />
     <Compile Include="Model\Igrac.cs" />
     <Compile Include="Model\Klub.cs" />
     <Compile Include="Model\Kolo.cs" />
@@ -124,6 +121,7 @@
     <Compile Include="Model\SezonaXML.cs" />
     <Compile Include="Model\StatistikaKluba.cs" />
     <Compile Include="Model\Tim.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="Model\Utakmica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\SimulacijaSezone.cs" />

@@ -14,7 +14,7 @@ namespace FootballSimulator.Model
         private String id;
         List<Utakmica> utakmice;
         bool odigrano;
-        
+        int redniBroj;
         // Properties
         public string Id
         {
@@ -51,7 +51,9 @@ namespace FootballSimulator.Model
             {
                 odigrano = value;
             }
-        }      
+        }
+
+        public int RedniBroj { get => redniBroj; set => redniBroj = value; }
 
         // Konstruktori
         public Kolo()

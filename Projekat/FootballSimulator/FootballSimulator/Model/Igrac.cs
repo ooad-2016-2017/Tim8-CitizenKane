@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FootballSimulator.Model.Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -18,6 +19,9 @@ namespace FootballSimulator.Model
         // Promjenjivi atributi - forma
         int stamina, gk, def, mid, att, postignutiGolovi, cleanSheet;
         bool suspendovan;
+
+        //Utakmice na kojima je dao gol
+        private List<UtakmicaIgrac> daoGol;
 
         // Properties
         public string Id
@@ -164,6 +168,8 @@ namespace FootballSimulator.Model
                 suspendovan = value;
             }
         }
+
+        internal List<UtakmicaIgrac> DaoGol { get => daoGol; set => daoGol = value; }
 
 
         // Konstruktori

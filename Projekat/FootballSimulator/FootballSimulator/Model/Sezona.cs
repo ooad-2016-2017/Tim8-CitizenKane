@@ -17,6 +17,8 @@ namespace FootballSimulator.Model
         int mojKlub; // indeks kluba u listi klubova (trebalo bi namjestiti da je 0)
         int trenutnoKolo;
 
+        private User vlasnikSezone;
+
         // Properties
         public string Id
         {
@@ -79,28 +81,33 @@ namespace FootballSimulator.Model
             }
         }
 
+        public User VlasnikSezone { get => vlasnikSezone; set => vlasnikSezone = value; }
+
 
         // Konstruktori
-        public Sezona()
+        public Sezona(User u)
         {
             this.timovi = new List<Klub>();
             this.kola = new List<Kolo>();
             this.mojKlub = 0;
             trenutnoKolo = 1; // kolo koje ce se sljedece odigrati
+            VlasnikSezone = u;
         }
-        public Sezona(List<Klub> timovi, List<Kolo> kola, int mojKlub, int trenutnoKolo)
+        public Sezona(User u, List<Klub> timovi, List<Kolo> kola, int mojKlub, int trenutnoKolo)
         {
             this.timovi = timovi;
             this.kola = kola;
             this.mojKlub = mojKlub;
             this.trenutnoKolo = trenutnoKolo;
+            VlasnikSezone = u;
         }
-        public Sezona(Klub mojTim, List<Klub> ostaliTimovi)
+        public Sezona(User u, Klub mojTim, List<Klub> ostaliTimovi)
         {
             this.timovi = ostaliTimovi;
             this.kola = generisiKola();
             this.mojKlub = ostaliTimovi.FindIndex((x) => x.Id == mojTim.Id);
             this.trenutnoKolo = 0;
+            VlasnikSezone = u;
         }
 
         // Metode
