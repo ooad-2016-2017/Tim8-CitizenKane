@@ -1,6 +1,6 @@
-const int zelena = 7;
-const int zuta = 8;
-const int crvena = 13;
+const int zelena = 6;
+const int zuta = 7;
+const int crvena = 8;
 String command;
 
 void setup() {
@@ -17,8 +17,10 @@ void setup() {
 
 void loop() {
   while(Serial.available()) {
-    command += (char)Serial.read();
+    command.concat((char)Serial.read());
+    //Serial.println(command); 
   }
+
   if(command == "ledsOff")
     SetLedsOff();
   else if(command == "win")
@@ -27,12 +29,11 @@ void loop() {
     SetLedOn(zuta);
   else if(command == "lose")
     SetLedOn(crvena);
-
-  command = "";
+  if(command.length() > 7)
+    command = "";
 }
 
 void SetLedOn(int led) {
-
   switch(led) {
     case zelena :
       digitalWrite(zelena, HIGH);
@@ -50,6 +51,7 @@ void SetLedOn(int led) {
       digitalWrite(crvena, HIGH);
       break;
   }
+  command = "";
 }
 
 //
@@ -59,4 +61,6 @@ void SetLedsOff() {
   digitalWrite(zelena, LOW);
   digitalWrite(zuta, LOW);
   digitalWrite(crvena, LOW);
+  command = "";
 }
+
