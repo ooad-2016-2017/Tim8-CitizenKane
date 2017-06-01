@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FootballSimulator.ExternalDevices.Arduino;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -13,7 +14,8 @@ namespace FootballSimulator.Model
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         private String id;
 
-        public static string aktivniKorisnik;
+        public static User aktivniKorisnik;
+        public static Arduino arduino = null;
 
         private string userName;
 

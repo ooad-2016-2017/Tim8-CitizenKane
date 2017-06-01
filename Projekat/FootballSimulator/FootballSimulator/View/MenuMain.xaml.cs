@@ -34,7 +34,7 @@ namespace FootballSimulator.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(PanelTaktika), null);
+            Frame.Navigate(typeof(Arduino_Test.ArduinoForm), null);
         }
 
         private void buttonIzlaz_Click(object sender, RoutedEventArgs e)

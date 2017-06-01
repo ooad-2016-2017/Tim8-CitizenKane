@@ -103,6 +103,7 @@
     <Compile Include="CustomKontrole\PrikazTima.xaml.cs" />
     <Compile Include="CustomKontrole\ToolBar.xaml.cs" />
     <Compile Include="ExternalDevices\Arduino\Arduino.cs" />
+    <Compile Include="ExternalDevices\SerialDeviceWrapper.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -128,6 +129,9 @@
     <Compile Include="ViewModel\SimulacijaSezone.cs" />
     <Compile Include="ViewModel\SimulacijaUtakmice.cs" />
     <Compile Include="ViewModel\Utility.cs" />
+    <Compile Include="View\Arduino Test\ArduinoForm.xaml.cs">
+      <DependentUpon>ArduinoForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\CRUD test\IgracCrud.xaml.cs">
       <DependentUpon>IgracCrud.xaml</DependentUpon>
     </Compile>
@@ -205,6 +209,10 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Arduino Test\ArduinoForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\CRUD test\IgracCrud.xaml">
       <SubType>Designer</SubType>
