@@ -1,5 +1,6 @@
 ﻿{
   "dependencies": {
+    "Microsoft.Azure.Mobile.Client": "3.1.0",
     "Microsoft.CodeAnalysis.CSharp": "1.0.0",
     "Microsoft.EntityFrameworkCore.Sqlite": "1.1.2",
     "Microsoft.EntityFrameworkCore.Tools": "1.1.1",
