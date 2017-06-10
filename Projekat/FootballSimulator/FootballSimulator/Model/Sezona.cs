@@ -141,9 +141,90 @@ namespace FootballSimulator.Model
         }
         public List<Kolo> generisiKola()
         {
-            // dodati algoritam za generisanje kola
-            return new List<Kolo>(); // privremeno da kompajlira :(
+            List<Kolo> kola = new List<Kolo>();
 
+            // Prvo kolo
+            List<Utakmica> lista = new List<Utakmica>()
+            {
+                new Utakmica(timovi[4].Ekipa,timovi[9].Ekipa), new Utakmica(timovi[8].Ekipa,timovi[11].Ekipa), new Utakmica(timovi[7].Ekipa,timovi[0].Ekipa),
+                new Utakmica(timovi[10].Ekipa,timovi[2].Ekipa), new Utakmica(timovi[1].Ekipa,timovi[6].Ekipa), new Utakmica(timovi[3].Ekipa,timovi[5].Ekipa),
+            }; kola.Add(new Kolo(lista));
+            // Drugo kolo
+            lista = new List<Utakmica>()
+            {
+                new Utakmica(timovi[11].Ekipa,timovi[4].Ekipa), new Utakmica(timovi[0].Ekipa,timovi[9].Ekipa), new Utakmica(timovi[2].Ekipa,timovi[8].Ekipa),
+                new Utakmica(timovi[6].Ekipa,timovi[7].Ekipa), new Utakmica(timovi[5].Ekipa,timovi[10].Ekipa), new Utakmica(timovi[3].Ekipa,timovi[1].Ekipa),
+            }; kola.Add(new Kolo(lista));
+            // Trece kolo
+            lista = new List<Utakmica>()
+            {
+                new Utakmica(timovi[4].Ekipa,timovi[0].Ekipa), new Utakmica(timovi[11].Ekipa,timovi[2].Ekipa), new Utakmica(timovi[10].Ekipa,timovi[1].Ekipa),
+                new Utakmica(timovi[8].Ekipa,timovi[5].Ekipa), new Utakmica(timovi[7].Ekipa,timovi[3].Ekipa), new Utakmica(timovi[9].Ekipa,timovi[6].Ekipa),
+            }; kola.Add(new Kolo(lista));
+            // Cetvrto kolo
+            lista = new List<Utakmica>()
+            {
+                new Utakmica(timovi[4].Ekipa,timovi[2].Ekipa), new Utakmica(timovi[6].Ekipa,timovi[0].Ekipa), new Utakmica(timovi[11].Ekipa,timovi[5].Ekipa),
+                new Utakmica(timovi[3].Ekipa,timovi[9].Ekipa), new Utakmica(timovi[1].Ekipa,timovi[8].Ekipa), new Utakmica(timovi[10].Ekipa,timovi[7].Ekipa),
+            }; kola.Add(new Kolo(lista));
+            // Peto kolo
+            lista = new List<Utakmica>()
+            {
+                new Utakmica(timovi[4].Ekipa,timovi[6].Ekipa), new Utakmica(timovi[2].Ekipa,timovi[5].Ekipa), new Utakmica(timovi[0].Ekipa,timovi[3].Ekipa),
+                new Utakmica(timovi[11].Ekipa,timovi[1].Ekipa), new Utakmica(timovi[9].Ekipa,timovi[10].Ekipa), new Utakmica(timovi[8].Ekipa,timovi[7].Ekipa),
+            }; kola.Add(new Kolo(lista));
+            // Šesto kolo
+            lista = new List<Utakmica>()
+            {
+                new Utakmica(timovi[5].Ekipa,timovi[4].Ekipa), new Utakmica(timovi[3].Ekipa,timovi[6].Ekipa), new Utakmica(timovi[1].Ekipa,timovi[2].Ekipa),
+                new Utakmica(timovi[10].Ekipa,timovi[0].Ekipa), new Utakmica(timovi[11].Ekipa,timovi[7].Ekipa), new Utakmica(timovi[8].Ekipa,timovi[9].Ekipa),
+            }; kola.Add(new Kolo(lista));
+            // Sedmo kolo
+            lista = new List<Utakmica>()
+            {
+                new Utakmica(timovi[4].Ekipa,timovi[3].Ekipa), new Utakmica(timovi[5].Ekipa,timovi[1].Ekipa), new Utakmica(timovi[6].Ekipa,timovi[10].Ekipa),
+                new Utakmica(timovi[7].Ekipa,timovi[2].Ekipa), new Utakmica(timovi[0].Ekipa,timovi[8].Ekipa), new Utakmica(timovi[11].Ekipa,timovi[9].Ekipa),
+            }; kola.Add(new Kolo(lista));
+            // Osmo kolo
+            lista = new List<Utakmica>()
+            {
+                new Utakmica(timovi[4].Ekipa,timovi[1].Ekipa), new Utakmica(timovi[10].Ekipa,timovi[3].Ekipa), new Utakmica(timovi[7].Ekipa,timovi[5].Ekipa),
+                new Utakmica(timovi[9].Ekipa,timovi[2].Ekipa), new Utakmica(timovi[8].Ekipa,timovi[6].Ekipa), new Utakmica(timovi[11].Ekipa,timovi[0].Ekipa),
+            }; kola.Add(new Kolo(lista));
+            // Deveto kolo
+            lista = new List<Utakmica>()
+            {
+                new Utakmica(timovi[4].Ekipa,timovi[10].Ekipa), new Utakmica(timovi[8].Ekipa,timovi[3].Ekipa), new Utakmica(timovi[2].Ekipa,timovi[0].Ekipa),
+                new Utakmica(timovi[5].Ekipa,timovi[9].Ekipa), new Utakmica(timovi[1].Ekipa,timovi[7].Ekipa), new Utakmica(timovi[9].Ekipa,timovi[5].Ekipa),
+            }; kola.Add(new Kolo(lista));
+            // Deseto kolo
+            lista = new List<Utakmica>()
+            {
+                new Utakmica(timovi[4].Ekipa,timovi[7].Ekipa), new Utakmica(timovi[8].Ekipa,timovi[10].Ekipa), new Utakmica(timovi[9].Ekipa,timovi[1].Ekipa),
+                new Utakmica(timovi[11].Ekipa,timovi[3].Ekipa), new Utakmica(timovi[2].Ekipa,timovi[6].Ekipa), new Utakmica(timovi[0].Ekipa,timovi[5].Ekipa),
+            }; kola.Add(new Kolo(lista));
+            // Jedanaesto kolo
+            lista = new List<Utakmica>()
+            {
+                new Utakmica(timovi[4].Ekipa,timovi[8].Ekipa), new Utakmica(timovi[10].Ekipa,timovi[11].Ekipa), new Utakmica(timovi[7].Ekipa,timovi[9].Ekipa),
+                new Utakmica(timovi[5].Ekipa,timovi[6].Ekipa), new Utakmica(timovi[1].Ekipa,timovi[0].Ekipa), new Utakmica(timovi[3].Ekipa,timovi[2].Ekipa),
+            }; kola.Add(new Kolo(lista));
+
+
+            return dupliraj(kola);
+        }
+        private static List<Kolo> dupliraj(List<Kolo> kola)
+        {
+            for(int i = 0; i < 11; i ++)
+            {
+                List<Utakmica> kolo = new List<Utakmica>();
+                for(int j = 0; j < 6; j++)
+                {
+                    kolo.Add(new Utakmica(kola[i].Utakmice[j].Gosti,kola[i].Utakmice[j].Domaci));
+                }
+                kola.Add(new Kolo(kolo));
+            }
+            return kola;
         }
         public List<Igrac> najboljiStrijelci()
         {
