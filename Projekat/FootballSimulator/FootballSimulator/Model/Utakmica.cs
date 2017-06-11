@@ -1,5 +1,4 @@
-﻿using FootballSimulator.Model.Database;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -17,9 +16,7 @@ namespace FootballSimulator.Model
         Tim gosti;
         Rezultat rezultat;
         bool odigrana;
-
-        //Igraci koji su dali gol na ovoj utakmici
-        private List<UtakmicaIgrac> strijelci;
+        List<Igrac> strijelci;
 
         // Properties
         public string Id
@@ -70,18 +67,6 @@ namespace FootballSimulator.Model
                 rezultat = value;
             }
         }
-        public List<UtakmicaIgrac> Strijelci
-        {
-            get
-            {
-                return strijelci;
-            }
-
-            set
-            {
-                strijelci = value;
-            }
-        }
         public bool Odigrana
         {
             get
@@ -117,16 +102,7 @@ namespace FootballSimulator.Model
             this.domaci = domaci;
             this.gosti = gosti;
             this.rezultat = rezultat;
-            this.strijelci = new List<UtakmicaIgrac>();
-            //ne znam hocel radit
-            foreach (Igrac i in strijelci)
-            {
-                var ui = new UtakmicaIgrac();
-                ui.Utakmica = this;
-                ui.Igrac = i;
-                this.strijelci.Add(ui);
-            }
-                
+            this.strijelci = new List<Igrac>();
             this.odigrana = false;
         }
 

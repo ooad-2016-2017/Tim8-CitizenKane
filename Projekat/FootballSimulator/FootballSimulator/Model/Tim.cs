@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FootballSimulator.Model
 {
-    class Tim
+    public class Tim
     {
         // Atributi
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -32,51 +32,7 @@ namespace FootballSimulator.Model
                 naziv = value;
             }
         }
-        public List<Igrac> PocetniSastav
-        {
-            get
-            {
-                return sastav.GetRange(0, 11);
-            }
 
-            set
-            {
-                if (value.Count != 11)
-                    throw new ArgumentException("Pocetni sastav mora imati 11 igraca");
-                var pocetni = sastav.GetRange(0, 11);
-                pocetni = value;
-            }
-        }
-        public List<Igrac> KlupaSastav
-        {
-            get
-            {
-                return sastav.GetRange(11, 6);
-            }
-
-            set
-            {
-                if (value.Count != 6)
-                    throw new ArgumentException("Kluba sastav mora imati 6 igraca");
-                var pocetni = sastav.GetRange(11, 6);
-                pocetni = value;
-            }
-        }
-        public List<Igrac> RezerveSastav
-        {
-            get
-            {
-                return sastav.GetRange(17, 8);
-            }
-
-            set
-            {
-                if (value.Count != 8)
-                    throw new ArgumentException("Rezerve sastav mora imati 8 igraca");
-                var pocetni = sastav.GetRange(17, 8);
-                pocetni = value;
-            }
-        }
         public string Formacija
         {
             get
@@ -126,29 +82,27 @@ namespace FootballSimulator.Model
             }
         }
 
+        public List<Igrac> Sastav { get => sastav; set => sastav = value; }
+
 
 
         // Konstruktori
         public Tim()
         {
             this.Naziv = "";
-            this.PocetniSastav = new List<Igrac>();
-            this.KlupaSastav = new List<Igrac>();
-            this.RezerveSastav = new List<Igrac>();
             this.Formacija = "4-4-2";
             this.Kapiten = null;
             dummy = new Igrac("", 0, 0, 0, 0, 0, 0);
         }
-        public Tim(string naziv, List<Igrac> pocetniSastav, List<Igrac> klupaSastav, List<Igrac> rezerveSastav, string formacija, Igrac kapiten)
+        public Tim(string naziv, List<Igrac> sastav, string formacija, Igrac kapiten)
         {
             this.Naziv = naziv;
-            this.PocetniSastav = pocetniSastav;
-            this.KlupaSastav = klupaSastav;
-            this.RezerveSastav = rezerveSastav;
+            this.Sastav = sastav;
             this.Formacija = formacija;
             this.Kapiten = kapiten;
             dummy = new Igrac("", 0, 0, 0, 0, 0, 0);
         }
+
 
         // Metode
         public void dodajIgraca(Igrac i)
@@ -159,7 +113,7 @@ namespace FootballSimulator.Model
         public int dajUkupanBrojIgraca()
         {
             //Vraca broj igraca koji nisu dummy
-            return sastav.Where(i => i != dummy).Count();
+            return Sastav.Where(i => i != dummy).Count();
         }
 
         public void obrisiIgraca(Igrac igrac)
@@ -167,27 +121,27 @@ namespace FootballSimulator.Model
 
             for (int i = 0; i < 11; i++)
             {
-                if (sastav[i].Id == igrac.Id)
+                if (Sastav[i].Id == igrac.Id)
                 {
-                    sastav[i] = dummy;
+                    Sastav[i] = dummy;
                     return;
                 }
             }
 
             for (int i = 11; i < 17; i++)
             {
-                if (sastav[i].Id == igrac.Id)
+                if (Sastav[i].Id == igrac.Id)
                 {
-                    sastav[i] = dummy;
+                    Sastav[i] = dummy;
                     return;
                 }
             }
 
             for (int i = 17; i < 25; i++)
             {
-                if (sastav[i].Id == igrac.Id)
+                if (Sastav[i].Id == igrac.Id)
                 {
-                    sastav[i] = dummy;
+                    Sastav[i] = dummy;
                     return;
                 }
             }
@@ -202,18 +156,23 @@ namespace FootballSimulator.Model
         // 17 - 27 rezerve
         public void promjeniPoziciju(Igrac i, int pozicija)
         {
-            int trenutnaPozicija = sastav.IndexOf(i);
-            sastav[trenutnaPozicija] = pronadjiIgraca(pozicija);
-            sastav[pozicija] = i;
+            int trenutnaPozicija = Sastav.IndexOf(i);
+            Sastav[trenutnaPozicija] = pronadjiIgraca(pozicija);
+            Sastav[pozicija] = i;
         }
         public Igrac pronadjiIgraca(int pozicija)
         {
-            return sastav[pozicija];
+            return Sastav[pozicija];
         }
         public List<Igrac> dajSveIgrace()
         {
-            return sastav;
+            return Sastav;
         }
-            
+
+        public override string ToString()
+        {
+            return naziv;
+        }
+
     }
 }

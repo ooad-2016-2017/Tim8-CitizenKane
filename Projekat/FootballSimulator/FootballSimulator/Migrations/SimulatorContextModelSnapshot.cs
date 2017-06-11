@@ -34,21 +34,21 @@ namespace FootballSimulator.Migrations
                     b.Property<string>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("Att");
+                    b.Property<string>("Ime");
 
                     b.Property<double>("Cijena");
 
-                    b.Property<int>("CleanSheet");
+                    b.Property<int>("Godine");
+
+                    b.Property<int>("Att");
+
+                    b.Property<int>("Mid");
 
                     b.Property<int>("Def");
 
                     b.Property<int>("Gk");
 
-                    b.Property<int>("Godine");
-
-                    b.Property<string>("Ime");
-
-                    b.Property<int>("Mid");
+                    b.Property<int>("CleanSheet");
 
                     b.Property<int>("PostignutiGolovi");
 
@@ -56,19 +56,9 @@ namespace FootballSimulator.Migrations
 
                     b.Property<bool>("Suspendovan");
 
-                    b.Property<string>("TimId");
-
-                    b.Property<string>("TimId1");
-
-                    b.Property<string>("TimId2");
+                    b.Property<int>("TimId");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("TimId");
-
-                    b.HasIndex("TimId1");
-
-                    b.HasIndex("TimId2");
 
                     b.ToTable("Igraci");
                 });
@@ -225,83 +215,6 @@ namespace FootballSimulator.Migrations
                     b.HasIndex("RezultatId");
 
                     b.ToTable("Utakmice");
-                });
-
-            modelBuilder.Entity("FootballSimulator.Model.Database.UtakmicaIgrac", b =>
-                {
-                    b.HasOne("FootballSimulator.Model.Utakmica")
-                        .WithMany("Strijelci")
-                        .HasForeignKey("UtakmicaId");
-                });
-
-            modelBuilder.Entity("FootballSimulator.Model.Igrac", b =>
-                {
-                    b.HasOne("FootballSimulator.Model.Tim")
-                        .WithMany("KlupaSastav")
-                        .HasForeignKey("TimId");
-
-                    b.HasOne("FootballSimulator.Model.Tim")
-                        .WithMany("PocetniSastav")
-                        .HasForeignKey("TimId1");
-
-                    b.HasOne("FootballSimulator.Model.Tim")
-                        .WithMany("RezerveSastav")
-                        .HasForeignKey("TimId2");
-                });
-
-            modelBuilder.Entity("FootballSimulator.Model.Klub", b =>
-                {
-                    b.HasOne("FootballSimulator.Model.Tim", "Ekipa")
-                        .WithMany()
-                        .HasForeignKey("EkipaId");
-
-                    b.HasOne("FootballSimulator.Model.Sezona")
-                        .WithMany("Timovi")
-                        .HasForeignKey("SezonaId");
-
-                    b.HasOne("FootballSimulator.Model.StatistikaKluba", "Statistika")
-                        .WithMany()
-                        .HasForeignKey("StatistikaId");
-                });
-
-            modelBuilder.Entity("FootballSimulator.Model.Kolo", b =>
-                {
-                    b.HasOne("FootballSimulator.Model.Sezona")
-                        .WithMany("Kola")
-                        .HasForeignKey("SezonaId");
-                });
-
-            modelBuilder.Entity("FootballSimulator.Model.Sezona", b =>
-                {
-                    b.HasOne("FootballSimulator.Model.User", "VlasnikSezone")
-                        .WithMany()
-                        .HasForeignKey("VlasnikSezoneId");
-                });
-
-            modelBuilder.Entity("FootballSimulator.Model.Tim", b =>
-                {
-                    b.HasOne("FootballSimulator.Model.Igrac", "Kapiten")
-                        .WithMany()
-                        .HasForeignKey("KapitenId");
-                });
-
-            modelBuilder.Entity("FootballSimulator.Model.Utakmica", b =>
-                {
-                    b.HasOne("FootballSimulator.Model.Tim", "Domaci")
-                        .WithMany()
-                        .HasForeignKey("DomaciId");
-
-                    b.HasOne("FootballSimulator.Model.Tim", "Gosti")
-                        .WithMany()
-                        .HasForeignKey("GostiId");
-
-                    b.HasOne("FootballSimulator.Model.Kolo")
-                        .WithMany("Utakmice")
-                        .HasForeignKey("KoloId");
-
-                    b.HasOne("FootballSimulator.Model.Rezultat", "Rezultat")
-                        .WithMany()
-                        .HasForeignKey("RezultatId");
                 });
         }
     }

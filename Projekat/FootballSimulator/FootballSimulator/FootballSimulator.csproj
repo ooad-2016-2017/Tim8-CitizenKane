@@ -116,7 +116,6 @@
     </Compile>
     <Compile Include="Migrations\SimulatorContextModelSnapshot.cs" />
     <Compile Include="Model\Database\SimulatorContext.cs" />
-    <Compile Include="Model\Database\UtakmicaIgrac.cs" />
     <Compile Include="Model\Igrac.cs" />
     <Compile Include="Model\Klub.cs" />
     <Compile Include="Model\Kolo.cs" />
@@ -156,6 +155,9 @@
     <Compile Include="View\PanelKalendar.xaml.cs">
       <DependentUpon>PanelKalendar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\MenuOdabirTimova.xaml.cs">
+      <DependentUpon>MenuOdabirTimova.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\PanelOpcije.xaml.cs">
       <DependentUpon>PanelOpcije.xaml</DependentUpon>
     </Compile>
@@ -176,6 +178,19 @@
     <None Include="FootballSimulator_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\1.png" />
+    <Content Include="Assets\10.png" />
+    <Content Include="Assets\11.png" />
+    <Content Include="Assets\2.png" />
+    <Content Include="Assets\3.png" />
+    <Content Include="Assets\4.png" />
+    <Content Include="Assets\433.png" />
+    <Content Include="Assets\442.png" />
+    <Content Include="Assets\5.png" />
+    <Content Include="Assets\6.png" />
+    <Content Include="Assets\7.png" />
+    <Content Include="Assets\8.png" />
+    <Content Include="Assets\9.png" />
     <Content Include="Assets\Background.jpg" />
     <Content Include="Assets\football_pitch.jpg" />
     <Content Include="Assets\Logo.png" />
@@ -246,6 +261,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\PanelKalendar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MenuOdabirTimova.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
