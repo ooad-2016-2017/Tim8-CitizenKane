@@ -8,7 +8,7 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="97,238,0,0" VerticalAlignment="Top" Width="967"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="97,238,0,0" VerticalAlignment="Top" Width="967" PlaceholderText="lista uređaja..."/>
         <Button x:Name="button" Content="Osvjezi" HorizontalAlignment="Left" Margin="53,176,0,0" VerticalAlignment="Top" Click="button_Click"/>
         <Button x:Name="button2" Content="Pobjeda" HorizontalAlignment="Left" Margin="55,289,0,0" VerticalAlignment="Top" Click="button2_Click"/>
         <Button x:Name="button3" Content="Remi" HorizontalAlignment="Left" Margin="149,289,0,0" VerticalAlignment="Top" Click="button3_Click"/>

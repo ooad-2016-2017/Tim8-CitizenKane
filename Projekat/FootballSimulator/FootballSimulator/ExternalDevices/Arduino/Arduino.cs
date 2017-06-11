@@ -54,6 +54,9 @@ namespace FootballSimulator.ExternalDevices.Arduino
             DataWriter dw = new DataWriter(Device.OutputStream);
             dw.WriteString("draw");
             await dw.StoreAsync();
+
+            DataReader dr = new DataReader(Device.InputStream);
+            string input = dr.ReadString(2);
         }
 
         public async void ugasi()
