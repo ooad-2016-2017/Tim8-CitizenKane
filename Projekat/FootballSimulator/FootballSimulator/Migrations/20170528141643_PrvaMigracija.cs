@@ -62,12 +62,6 @@ namespace FootballSimulator.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Sezone", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Sezone_User_VlasnikSezoneId",
-                        column: x => x.VlasnikSezoneId,
-                        principalTable: "User",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -82,12 +76,6 @@ namespace FootballSimulator.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Kola", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Kola_Sezone_SezonaId",
-                        column: x => x.SezonaId,
-                        principalTable: "Sezone",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -102,12 +90,6 @@ namespace FootballSimulator.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Timovi", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Timovi_KapitenId",
-                        column: x => x.KapitenId,
-                        principalTable: "Igraci",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -115,28 +97,22 @@ namespace FootballSimulator.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
-                    Att = table.Column<int>(nullable: false),
+                    Ime = table.Column<string>(nullable: true),
                     Cijena = table.Column<double>(nullable: false),
-                    CleanSheet = table.Column<int>(nullable: true),
+                    Godine = table.Column<int>(nullable: false),
+                    Att = table.Column<int>(nullable: false),
+                    Mid = table.Column<int>(nullable: false),
                     Def = table.Column<int>(nullable: false),
                     Gk = table.Column<int>(nullable: false),
-                    Godine = table.Column<int>(nullable: false),
-                    Ime = table.Column<string>(nullable: true),
-                    Mid = table.Column<int>(nullable: false),
+                    CleanSheet = table.Column<int>(nullable: true),
                     PostignutiGolovi = table.Column<int>(nullable: true),
                     Stamina = table.Column<int>(nullable: false),
                     Suspendovan = table.Column<bool>(nullable: true),
-                    TimId = table.Column<string>(nullable: true),
+                    TimId = table.Column<int>(nullable: true),
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Igraci", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Igraci_Timovi_TimId",
-                        column: x => x.TimId,
-                        principalTable: "Timovi",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -152,24 +128,6 @@ namespace FootballSimulator.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Klubovi", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Klubovi_Timovi_EkipaId",
-                        column: x => x.EkipaId,
-                        principalTable: "Timovi",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Klubovi_Sezone_SezonaId",
-                        column: x => x.SezonaId,
-                        principalTable: "Sezone",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Klubovi_Statistike_StatistikaId",
-                        column: x => x.StatistikaId,
-                        principalTable: "Statistike",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -186,30 +144,6 @@ namespace FootballSimulator.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Utakmice", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Utakmice_Timovi_DomaciId",
-                        column: x => x.DomaciId,
-                        principalTable: "Timovi",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Utakmice_Timovi_GostiId",
-                        column: x => x.GostiId,
-                        principalTable: "Timovi",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Utakmice_Kola_KoloId",
-                        column: x => x.KoloId,
-                        principalTable: "Kola",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Utakmice_Rezultat_RezultatId",
-                        column: x => x.RezultatId,
-                        principalTable: "Rezultat",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -223,18 +157,6 @@ namespace FootballSimulator.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_UtakmicaIgrac", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_UtakmicaIgrac_Utakmice_UtakmicaId",
-                        column: x => x.UtakmicaId,
-                        principalTable: "Utakmice",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_UtakmicaIgrac_Igraci_IgracId",
-                        column: x => x.UtakmicaId,
-                        principalTable: "Igraci",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
@@ -297,29 +219,10 @@ namespace FootballSimulator.Migrations
                 table: "Utakmice",
                 column: "RezultatId");
 
-            migrationBuilder.AddForeignKey(
-                name: "FK_Timovi_Igraci_KapitenId",
-                table: "Timovi",
-                column: "KapitenId",
-                principalTable: "Igraci",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Restrict);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_Igraci_Timovi_TimId",
-                table: "Igraci");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_Igraci_Timovi_TimId1",
-                table: "Igraci");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_Igraci_Timovi_TimId2",
-                table: "Igraci");
-
             migrationBuilder.DropTable(
                 name: "UtakmicaIgrac");
 

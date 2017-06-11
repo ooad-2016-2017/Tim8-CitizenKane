@@ -1,14 +1,14 @@
-﻿using FootballSimulator.Model.Database;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace FootballSimulator.Model
 {
-    class Igrac
+    public class Igrac
     {
         // Osnovni atributi
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -19,9 +19,7 @@ namespace FootballSimulator.Model
         // Promjenjivi atributi - forma
         int stamina, gk, def, mid, att, postignutiGolovi, cleanSheet;
         bool suspendovan;
-
-        //Utakmice na kojima je dao gol
-        private List<UtakmicaIgrac> daoGol;
+        int timid;
 
         // Properties
         public string Id
@@ -169,7 +167,19 @@ namespace FootballSimulator.Model
             }
         }
 
-        internal List<UtakmicaIgrac> DaoGol { get => daoGol; set => daoGol = value; }
+        public int TimId
+        {
+            get
+            {
+                return timid;
+            }
+
+            set
+            {
+                timid = value;
+            }
+        }
+
 
 
         // Konstruktori
@@ -186,6 +196,7 @@ namespace FootballSimulator.Model
             this.postignutiGolovi = 0;
             this.cleanSheet = 0;
             this.suspendovan = false;
+            this.timid = 0;
         }
         public Igrac(Igrac i)
         {
@@ -200,6 +211,7 @@ namespace FootballSimulator.Model
             this.postignutiGolovi = i.postignutiGolovi;
             this.cleanSheet = i.cleanSheet;
             this.suspendovan = i.suspendovan;
+            this.timid = 0;
         }
         public Igrac(string ime, int godine, double cijena, int umor, int gK, int dEF, int mID, int aTT, int postignutiGolovi, int cleanSheet, bool suspendovan) // svi atributi koje posjeduje
         {
@@ -214,6 +226,7 @@ namespace FootballSimulator.Model
             this.postignutiGolovi = postignutiGolovi;
             this.cleanSheet = cleanSheet;
             this.suspendovan = suspendovan;
+            this.timid = 0;
         }
         public Igrac(string ime, int godine, double cijena, int gK, int dEF, int mID, int aTT) // kreacija igraca prije pocetka sezone (bez umora, golova, suspenzija)
         {
@@ -227,6 +240,7 @@ namespace FootballSimulator.Model
             this.postignutiGolovi = 0;
             this.cleanSheet = 0;
             this.suspendovan = false;
+            this.timid = 0;
         }
 
         // Metode

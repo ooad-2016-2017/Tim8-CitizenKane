@@ -57,19 +57,9 @@ namespace FootballSimulator.Migrations
 
                     b.Property<bool>("Suspendovan");
 
-                    b.Property<string>("TimId");
-
-                    b.Property<string>("TimId1");
-
-                    b.Property<string>("TimId2");
+                    b.Property<int>("TimId");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("TimId");
-
-                    b.HasIndex("TimId1");
-
-                    b.HasIndex("TimId2");
 
                     b.ToTable("Igraci");
                 });
@@ -240,14 +230,6 @@ namespace FootballSimulator.Migrations
                     b.HasOne("FootballSimulator.Model.Tim")
                         .WithMany("KlupaSastav")
                         .HasForeignKey("TimId");
-
-                    b.HasOne("FootballSimulator.Model.Tim")
-                        .WithMany("PocetniSastav")
-                        .HasForeignKey("TimId1");
-
-                    b.HasOne("FootballSimulator.Model.Tim")
-                        .WithMany("RezerveSastav")
-                        .HasForeignKey("TimId2");
                 });
 
             modelBuilder.Entity("FootballSimulator.Model.Klub", b =>

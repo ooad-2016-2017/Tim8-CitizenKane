@@ -6,10 +6,34 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    d:DesignHeight="300"
-    d:DesignWidth="400">
+    Height="Auto"
+    Width="Auto">
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
 
+        <Image x:Name="igrac1" Source="Assets/1.png"/>
+        <Image x:Name="igrac2" Source="Assets/2.png"/>
+        <Image x:Name="igrac3" Source="Assets/3.png"/>
+        <Image x:Name="igrac4" Source="Assets/4.png"/>
+        <Image x:Name="igrac5" Source="Assets/5.png"/>
+        <Image x:Name="igrac6" Source="Assets/6.png"/>
+        <Image x:Name="igrac7" Source="Assets/7.png"/>
+        <Image x:Name="igrac8" Source="Assets/8.png"/>
+        <Image x:Name="igrac9" Source="Assets/9.png"/>
+        <Image x:Name="igrac10" Source="Assets/10.png"/>
+        <Image x:Name="igrac11" Source="Assets/11.png"/>
     </Grid>
 </UserControl>
