@@ -17,7 +17,7 @@ Platform assembly: C:\Users\irhad\Desktop\VCS\Tim8-CitizenKane\Igrica\exe\fkf_Da
 Loading C:\Users\irhad\Desktop\VCS\Tim8-CitizenKane\Igrica\exe\fkf_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\irhad\Desktop\VCS\Tim8-CitizenKane\Igrica\exe\fkf_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\irhad\Desktop\VCS\Tim8-CitizenKane\Igrica\exe\fkf_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.024 seconds
+- Completed reload, in  0.084 seconds
 Platform assembly: C:\Users\irhad\Desktop\VCS\Tim8-CitizenKane\Igrica\exe\fkf_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\irhad\Desktop\VCS\Tim8-CitizenKane\Igrica\exe\fkf_Data\Managed\System.dll (this message is harmless)
 desktop: 1600x900 60Hz; virtual: 1600x900 at 0,0
@@ -25,15 +25,15 @@ desktop: 1600x900 60Hz; virtual: 1600x900 at 0,0
 XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 2.559877 ms
+UnloadTime: 2.429614 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 2654 -> priority: 1 
-  Thread -> id: 1d10 -> priority: 1 
+  Thread -> id: 2e0 -> priority: 1 
+  Thread -> id: 1348 -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 10.728592 ms
+UnloadTime: 23.085478 ms
 
 Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 314.
-Total: 0.314606 ms (FindLiveObjects: 0.043815 ms CreateObjectMapping: 0.024473 ms MarkObjects: 0.223816 ms  DeleteObjects: 0.021315 ms)
+Total: 0.654476 ms (FindLiveObjects: 0.087237 ms CreateObjectMapping: 0.075000 ms MarkObjects: 0.448817 ms  DeleteObjects: 0.041842 ms)
 
 Can't add component 'Rigidbody' to Meta(Clone) because such a component is already added to the game object!
  
@@ -99,119 +99,8 @@ NullReferenceException: Object reference not set to an instance of an object
 (Filename:  Line: -1)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.387899 ms
+UnloadTime: 1.432900 ms
 
 Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 314.
-Total: 0.868029 ms (FindLiveObjects: 0.063158 ms CreateObjectMapping: 0.052105 ms MarkObjects: 0.589739 ms  DeleteObjects: 0.161053 ms)
-
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.466058 ms
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 314.
-Total: 0.626449 ms (FindLiveObjects: 0.061973 ms CreateObjectMapping: 0.041842 ms MarkObjects: 0.478422 ms  DeleteObjects: 0.042631 ms)
-
-Can't add component 'Rigidbody' to Meta(Clone) because such a component is already added to the game object!
- 
-(Filename:  Line: 97)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at CollisionDetection.OnCollisionEnter (UnityEngine.Collision collision) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Can't add component 'Rigidbody' to Meta(Clone) because such a component is already added to the game object!
- 
-(Filename:  Line: 97)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at CollisionDetection.OnCollisionEnter (UnityEngine.Collision collision) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Can't add component 'Rigidbody' to Meta(Clone) because such a component is already added to the game object!
- 
-(Filename:  Line: 97)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at CollisionDetection.OnCollisionEnter (UnityEngine.Collision collision) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Can't add component 'Rigidbody' to Meta(Clone) because such a component is already added to the game object!
- 
-(Filename:  Line: 97)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at CollisionDetection.OnCollisionEnter (UnityEngine.Collision collision) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Can't add component 'Rigidbody' to Meta(Clone) because such a component is already added to the game object!
- 
-(Filename:  Line: 97)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at CollisionDetection.OnCollisionEnter (UnityEngine.Collision collision) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Can't add component 'Rigidbody' to Meta(Clone) because such a component is already added to the game object!
- 
-(Filename:  Line: 97)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at CollisionDetection.OnCollisionEnter (UnityEngine.Collision collision) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Can't add component 'Rigidbody' to Meta(Clone) because such a component is already added to the game object!
- 
-(Filename:  Line: 97)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at CollisionDetection.OnCollisionEnter (UnityEngine.Collision collision) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Can't add component 'Rigidbody' to Meta(Clone) because such a component is already added to the game object!
- 
-(Filename:  Line: 97)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at CollisionDetection.OnCollisionEnter (UnityEngine.Collision collision) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Can't add component 'Rigidbody' to Meta(Clone) because such a component is already added to the game object!
- 
-(Filename:  Line: 97)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at CollisionDetection.OnCollisionEnter (UnityEngine.Collision collision) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Can't add component 'Rigidbody' to Meta(Clone) because such a component is already added to the game object!
- 
-(Filename:  Line: 97)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at CollisionDetection.OnCollisionEnter (UnityEngine.Collision collision) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Can't add component 'Rigidbody' to Meta(Clone) because such a component is already added to the game object!
- 
-(Filename:  Line: 97)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at CollisionDetection.OnCollisionEnter (UnityEngine.Collision collision) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.485005 ms
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 314.
-Total: 0.923292 ms (FindLiveObjects: 0.084868 ms CreateObjectMapping: 0.065131 ms MarkObjects: 0.610265 ms  DeleteObjects: 0.160658 ms)
+Total: 1.127372 ms (FindLiveObjects: 0.084473 ms CreateObjectMapping: 0.069079 ms MarkObjects: 0.751186 ms  DeleteObjects: 0.218685 ms)
 
