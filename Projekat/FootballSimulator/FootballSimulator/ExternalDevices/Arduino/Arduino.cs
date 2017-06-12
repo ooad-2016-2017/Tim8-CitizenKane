@@ -18,6 +18,12 @@ namespace FootballSimulator.ExternalDevices.Arduino
         public Arduino(SerialDevice device)
         {
             this.Device = device;
+
+            this.device.BaudRate = 9600;
+            this.device.StopBits = SerialStopBitCount.One;
+            this.device.DataBits = 8;
+            this.device.Parity = SerialParity.None;
+            this.device.Handshake = SerialHandshake.None;
         }
 
         public SerialDevice Device { get => device; set => device = value; }

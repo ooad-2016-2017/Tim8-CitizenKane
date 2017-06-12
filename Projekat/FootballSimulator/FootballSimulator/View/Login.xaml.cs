@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FootballSimulator.CustomKontrole;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -31,6 +32,14 @@ namespace FootballSimulator.View
         {
             //Take selected user
             this.Frame.Navigate(typeof(MenuMain), null);
+        }
+
+        private void newBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NoviKorisnik nk = new NoviKorisnik();
+
+            p.Child = nk;
+            p.IsOpen = true;
         }
     }
 }
