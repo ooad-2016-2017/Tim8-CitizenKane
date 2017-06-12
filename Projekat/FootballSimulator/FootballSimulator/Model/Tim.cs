@@ -93,6 +93,7 @@ namespace FootballSimulator.Model
             this.Formacija = "4-4-2";
             this.Kapiten = null;
             dummy = new Igrac("", 0, 0, 0, 0, 0, 0);
+            Sastav = new List<Igrac>();
         }
         public Tim(string naziv, List<Igrac> sastav, string formacija, Igrac kapiten)
         {

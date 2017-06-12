@@ -43,20 +43,20 @@
             <Grid.Background>
                 <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/football_pitch.jpg"/>
             </Grid.Background>
-            <Image x:Name="igrac1" Source="ms-appx:///Assets/1.png" Grid.Column="2" Grid.Row="3"/>
-            <Image x:Name="igrac2" Source="ms-appx:///Assets/2.png" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <Image x:Name="igrac3" Source="ms-appx:///Assets/3.png"/>
-            <Image x:Name="igrac4" Source="ms-appx:///Assets/4.png"/>
-            <Image x:Name="igrac5" Source="ms-appx:///Assets/5.png"/>
-            <Image x:Name="igrac6" Source="ms-appx:///Assets/6.png"/>
-            <Image x:Name="igrac7" Source="ms-appx:///Assets/7.png"/>
-            <Image x:Name="igrac8" Source="ms-appx:///Assets/8.png"/>
-            <Image x:Name="igrac9" Source="ms-appx:///Assets/9.png"/>
-            <Image x:Name="igrac10" Source="ms-appx:///Assets/10.png"/>
-            <Image x:Name="igrac11" Source="ms-appx:///Assets/11.png"/>
-            <CustomKontrole:PrikazTima x:Name="prikazTima"/>
+            <CustomKontrole:PrikazIgraca x:Name="igrac1" VerticalAlignment="Top"/>
+            <CustomKontrole:PrikazIgraca x:Name="igrac2"/>
+            <CustomKontrole:PrikazIgraca x:Name="igrac3"/>
+            <CustomKontrole:PrikazIgraca x:Name="igrac4"/>
+            <CustomKontrole:PrikazIgraca x:Name="igrac5"/>
+            <CustomKontrole:PrikazIgraca x:Name="igrac6"/>
+            <CustomKontrole:PrikazIgraca x:Name="igrac7"/>
+            <CustomKontrole:PrikazIgraca x:Name="igrac8"/>
+            <CustomKontrole:PrikazIgraca x:Name="igrac9"/>
+            <CustomKontrole:PrikazIgraca x:Name="igrac10"/>
+            <CustomKontrole:PrikazIgraca x:Name="igrac11"/>
         </Grid>
-        <ListView x:Name="listViewIgraci" Height="Auto" Width="Auto" Grid.Column="2" Grid.RowSpan="2" Grid.Row="1">
+        <ListView x:Name="listViewIgraci" Background="CornflowerBlue" Opacity="0.7" Height="Auto" Width="Auto" Grid.Column="2" Grid.RowSpan="2" Grid.Row="1"
+                  DragStarting="listViewIgraci_DragStarting" CanDrag="True" CanDragItems="True">
             <ListBoxItem>Igrac1</ListBoxItem>
             <ListBoxItem>Igrac2</ListBoxItem>
             <ListBoxItem>Igrac2</ListBoxItem>

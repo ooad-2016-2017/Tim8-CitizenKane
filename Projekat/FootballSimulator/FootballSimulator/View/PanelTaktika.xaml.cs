@@ -27,6 +27,7 @@ namespace FootballSimulator.View
     public sealed partial class PanelTaktika : Page
     {
         bool sezona = false;
+        Tim t;
         public PanelTaktika()
         {
             this.InitializeComponent();
@@ -39,14 +40,15 @@ namespace FootballSimulator.View
         public PanelTaktika(Tim t)
         {
             this.InitializeComponent();
-            prikazTima = new CustomKontrole.PrikazTima(t.Formacija);
+            this.t = t;
+            //prikazTima = new CustomKontrole.PrikazTima(t.Formacija);
             prikazIgraca("");
             listViewIgraci.ItemsSource = t.Sastav;
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            Tim t = e.Parameter as Tim;
-            prikazIgraca(t.Formacija);
+            t = e.Parameter as Tim;
+            
             try
             {
                 SimulatorContext db = new SimulatorContext();
@@ -63,8 +65,8 @@ namespace FootballSimulator.View
                 MessageDialog mb = new MessageDialog(er.Message);
                 mb.ShowAsync();
             }
+            prikazIgraca(t.Formacija);
 
-            
         }
         private void prikazIgraca(String taktika)
         {
@@ -85,9 +87,10 @@ namespace FootballSimulator.View
             Grid.SetRow(igrac6, 1); Grid.SetColumn(igrac6, 0);
             Grid.SetRow(igrac7, 1); Grid.SetColumn(igrac7, 1);
             Grid.SetRow(igrac8, 1); Grid.SetColumn(igrac8, 3);
-            Grid.SetRow(igrac9, 1); Grid.SetColumn(igrac9, 4);
+            Grid.SetRow(igrac9, 1); Grid.SetColumn(igrac9, 4);  
             Grid.SetRow(igrac10, 0); Grid.SetColumn(igrac10, 1);
             Grid.SetRow(igrac11, 0); Grid.SetColumn(igrac11, 3);
+            popunjavanjeIgraca();
         }
         private void prikaz433()
         {
@@ -102,6 +105,33 @@ namespace FootballSimulator.View
             Grid.SetRow(igrac9, 0); Grid.SetColumn(igrac9, 1);
             Grid.SetRow(igrac10, 0); Grid.SetColumn(igrac10, 2);
             Grid.SetRow(igrac11, 0); Grid.SetColumn(igrac11, 3);
+            popunjavanjeIgraca();
+        }
+        private void popunjavanjeIgraca()
+        {
+            igrac1.postaviIgraca(t.Sastav[0],1);
+            igrac2.postaviIgraca(t.Sastav[1],2);
+            igrac3.postaviIgraca(t.Sastav[2],3);
+            igrac4.postaviIgraca(t.Sastav[3],4);
+            igrac5.postaviIgraca(t.Sastav[4],5);
+            igrac6.postaviIgraca(t.Sastav[5],6);
+            igrac7.postaviIgraca(t.Sastav[6],7);
+            igrac8.postaviIgraca(t.Sastav[7],8);
+            igrac9.postaviIgraca(t.Sastav[8],9);
+            igrac10.postaviIgraca(t.Sastav[9],10);
+            igrac11.postaviIgraca(t.Sastav[10],11);
+        }
+
+        private void listViewIgraci_DragStarting(UIElement sender, DragStartingEventArgs args)
+        {
+
+        }
+        private void SourceListView_DragItemsStarting(object sender, DragItemsStartingEventArgs e)
+        {
+            // Set the content of the DataPackage
+            e.Data.SetData("", listViewIgraci.SelectedItem);
+            // As we want our Reference list to say intact, we only allow Copy
+            //e.Data.RequestedOperation = DataPackageOperation.Copy;
         }
     }
 }

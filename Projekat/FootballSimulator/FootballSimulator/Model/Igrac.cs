@@ -256,5 +256,9 @@ namespace FootballSimulator.Model
         {
             stamina -= vrijednost;
         }
+        public override string ToString()
+        {
+            return ime + " " + att +" " +mid +" "+ def + " " + gk;
+        }
     }
 }
