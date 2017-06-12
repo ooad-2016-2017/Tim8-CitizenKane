@@ -18,6 +18,12 @@ namespace FootballSimulator.ExternalDevices.Arduino
         public Arduino(SerialDevice device)
         {
             this.Device = device;
+
+            this.device.BaudRate = 9600;
+            this.device.StopBits = SerialStopBitCount.One;
+            this.device.DataBits = 8;
+            this.device.Parity = SerialParity.None;
+            this.device.Handshake = SerialHandshake.None;
         }
 
         public SerialDevice Device { get => device; set => device = value; }
@@ -54,9 +60,6 @@ namespace FootballSimulator.ExternalDevices.Arduino
             DataWriter dw = new DataWriter(Device.OutputStream);
             dw.WriteString("draw");
             await dw.StoreAsync();
-
-            DataReader dr = new DataReader(Device.InputStream);
-            string input = dr.ReadString(2);
         }
 
         public async void ugasi()

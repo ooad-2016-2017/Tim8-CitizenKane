@@ -62,7 +62,10 @@ namespace FootballSimulator.View.Arduino_Test
         {
             String name = (string)comboBox.SelectedItem;
             if(name != null)
-                arduino = new Arduino(devices[stringovi.IndexOf(name)]);
+            {
+                var dev = devices[stringovi.IndexOf(name)];
+                arduino = new Arduino(dev);
+            }
         }
 
         private async void button2_Click(object sender, RoutedEventArgs e)
