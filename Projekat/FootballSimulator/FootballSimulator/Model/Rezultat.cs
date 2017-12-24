@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace FootballSimulator.Model
 {
-    class Rezultat
+    public class Rezultat
     {
         // Atributi
         private String id;
         int domaci, gosti;
+        bool odigrana;
 
         // Properties
         public string Id
@@ -50,6 +51,8 @@ namespace FootballSimulator.Model
             }
         }
 
+        public bool Odigrana { get => odigrana; set => odigrana = value; }
+
 
         // Konstruktori
         public Rezultat()
@@ -60,6 +63,22 @@ namespace FootballSimulator.Model
         {
             this.Domaci = domaci;
             this.Gosti = gosti;
+        }
+
+        public Rezultat(int domaci, int gosti, bool odigrana)
+        {
+            if (domaci < 0 || gosti < 0)
+                throw new ArgumentException("Rezultat ne smije sadrzavati negativne brojeve");
+            this.Domaci = domaci;
+            this.Gosti = gosti;
+            this.odigrana = odigrana;
+        }
+
+        public bool JeLiNerjeseno()
+        {
+            if (!odigrana)
+                throw new Exception("Utakmica nije odigrana");
+            return domaci == gosti;
         }
        
 
